@@ -1,0 +1,23 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: pgvector-db-final-lab
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pgvector
+    ports:
+      - "5050:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+  ollama:
+    image: ollama/ollama:0.5.5
+    container_name: ollama-service-final-lab
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+volumes:
+  pgdata:
+  ollama_data:

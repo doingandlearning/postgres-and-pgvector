@@ -1,0 +1,1 @@
+CREATE INDEX idx_metadata ON products USING GIN (metadata);

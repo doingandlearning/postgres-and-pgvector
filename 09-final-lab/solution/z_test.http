@@ -1,0 +1,7 @@
+POST http://localhost:5000/search
+Content-Type: application/json
+
+{
+    "query": "User cannot log in due to authentication failure",
+    "top_n": 5
+}

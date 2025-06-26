@@ -1,0 +1,18 @@
+### Verify that the model is working
+POST http://localhost:11434/api/embed
+Content-Type: application/json
+
+{
+	"model": "bge-m3",
+	"input": "Hello world"
+}
+###
+POST http://localhost:11434/api/generate
+Content-Type: application/json
+
+{
+  "model": "mistral",
+  "prompt": "What color is the sky at different times of the day? Respond using JSON",
+  "format": "json",
+  "stream": false
+}

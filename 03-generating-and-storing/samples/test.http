@@ -1,0 +1,9 @@
+### Verify that the model is working
+POST http://localhost:11434/api/embed
+Content-Type: application/json
+
+{
+	"model": "bge-m3",
+	"input": "Hello world"
+}
+###
