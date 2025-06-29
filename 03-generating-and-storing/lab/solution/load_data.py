@@ -16,24 +16,9 @@ DB_CONFIG = {
 }
 
 
-def get_embedding_liberty(text: str):
-    try:
-
-        headers = {"Content-Type": "application/json"}
-
-        payload = {"model": "bge-m3", "input": [text]}
-        response = requests.post(OLLAMA_URL, headers=headers, data=json.dumps(payload))
-        data = response.json()
-        return data["data"][0]["embeddings"]
-    except Exception as e:
-        print(e)
-
-
 def get_embedding(text: str):
     try:
-
         headers = {"Content-Type": "application/json"}
-
         payload = {"model": "bge-m3", "input": text}
         response = requests.post(OLLAMA_URL, headers=headers, data=json.dumps(payload))
         data = response.json()

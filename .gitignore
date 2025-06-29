@@ -142,3 +142,22 @@ cython_debug/
 ~$*.pptx
 ~$*.ppt
 
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon files
+Icon?
+._*
+
+# Thumbnails
+._.DS_Store
+
+# Spotlight files
+.Spotlight-V100
+.Trashes
+
+# macOS Finder tags
+*.fseventsd
+

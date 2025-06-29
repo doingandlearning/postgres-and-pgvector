@@ -1,47 +1,46 @@
+import requests
 import json
-import psycopg
-from step3 import search_similar_items
+from step1 import get_embedding_ollama
+from step2 import search_similar_books
+from step3 import format_books_for_prompt
 
-DB_CONFIG = {
-    "dbname": "pgvector",
-    "user": "postgres",
-    "password": "postgres",
-    "host": "localhost",
-    "port": "5050"
+OPENAI_API_KEY = "sk-"
+ # Replace with your actual key
+url = "https://api.openai.com/v1/chat/completions"
+
+headers = {
+    "Authorization": f"Bearer {OPENAI_API_KEY}",
+    "Content-Type": "application/json"
 }
 
-OLLAMA_URL = "http://localhost:11434/api/embed"
+def query_llm(prompt):
+    """Query OpenAI's LLM with retrieved book data."""
+    payload = {
+        "model": "gpt-4",
+        "messages": [
+            {"role": "system", "content": "You are an AI assistant helping a user find books."},
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0.7,
+        "max_tokens": 300
+    }
 
-def get_random_book_embedding():
-    """Retrieve a random book embedding from the database."""
-    conn = psycopg.connect(**DB_CONFIG)
-    cursor = conn.cursor()
+    response = requests.post(url, headers=headers, data=json.dumps(payload))
 
-    sql = """
-    SELECT name, embedding
-    FROM items
-    ORDER BY random()
-    LIMIT 1;
-    """
-
-    cursor.execute(sql)
-    result = cursor.fetchone()
-    
-    cursor.close()
-    conn.close()
-
-    if result:
-        name, embedding = result
-        print(f"\n📖 Using '{name}' for similarity search...")
-        return name, json.loads(embedding)
+    if response.status_code == 200:
+        return response.json()["choices"][0]["message"]["content"]
     else:
-        return None, None
+        return f"Error: {response.status_code}, {response.text}"
+
 
 if __name__ == "__main__":
-    # Get random book embedding
-    book_name, book_embedding = get_random_book_embedding()
-    if book_embedding:
-        similar_books = search_similar_items(book_embedding)
-        print("\n🔹 Recommended Books Similar to", book_name)
-        for name, similarity in similar_books:
-            print(f"{name} (Similarity: {similarity:.4f})")
+      # Retrieve relevant books
+  user_query = "What are the best books on artificial intelligence?"
+  query_embedding = get_embedding_ollama(user_query)
+  books = search_similar_books(query_embedding)
+  # Generate structured prompt
+  structured_prompt = format_books_for_prompt(books)
+  # Query LLM
+  llm_response = query_llm(structured_prompt)
+  print("\n🔹 LLM Response:")
+  print(llm_response)
