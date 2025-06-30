@@ -1,0 +1,163 @@
+{
+	"database": {
+		"host": "localhost",
+		"port": "5050",
+		"database": "pgvector",
+		"user": "postgres",
+		"password": "postgres"
+	},
+	"embedding": {
+		"model": "bge-m3",
+		"ollama_url": "http://localhost:11434/api/embed"
+	},
+	"llm": {
+		"provider": "openai",
+		"model": "gpt-4o-mini",
+		"api_key_env": "OPENAI_API_KEY",
+		"base_url": "https://api.openai.com/v1/chat/completions",
+		"temperature": 0.7,
+		"max_tokens": 400
+	},
+	"prompt_templates": {
+		"beginner_recommendations": {
+			"system": "You are a helpful librarian specializing in beginner-friendly technical books. Always explain why a book is suitable for beginners.",
+			"user_template": "A beginner is asking: '{query}'\n\nRelevant books from our collection:\n{context}\n\nPlease recommend the most beginner-friendly books and explain why they're good starting points."
+		},
+		"technical_explanation": {
+			"system": "You are a technical expert who explains complex concepts clearly using available reference materials.",
+			"user_template": "Question: {query}\n\nReference materials:\n{context}\n\nProvide a detailed technical explanation using the reference materials above."
+		},
+		"comparative_analysis": {
+			"system": "You are an expert analyst who compares and contrasts different resources to help users make informed decisions.",
+			"user_template": "User query: {query}\n\nAvailable options:\n{context}\n\nCompare these options, highlighting their strengths, weaknesses, and best use cases."
+		},
+		"personalized_recommendation": {
+			"system": "You are a personalized learning advisor who tailors recommendations to individual needs and backgrounds.",
+			"user_template": "A user with the following question: '{query}'\n\nRelevant resources:\n{context}\n\nProvide personalized recommendations considering different learning styles and experience levels."
+		}
+	},
+	"scenarios": [
+		{
+			"name": "Beginner Programming Books",
+			"description": "Find the best programming books for complete beginners",
+			"query": "What are the best programming books for someone who has never coded before?",
+			"context_limit": 5,
+			"filter_subject": "programming",
+			"similarity_threshold": 0.7,
+			"prompt_template": "beginner_recommendations",
+			"llm_temperature": 0.6
+		},
+		{
+			"name": "AI/ML Deep Dive",
+			"description": "Technical explanation of AI and machine learning concepts",
+			"query": "Explain the fundamentals of machine learning and neural networks",
+			"context_limit": 4,
+			"filter_subject": "ai",
+			"similarity_threshold": 0.6,
+			"prompt_template": "technical_explanation",
+			"llm_temperature": 0.3
+		},
+		{
+			"name": "Web Development Stack Comparison",
+			"description": "Compare different web development technologies and frameworks",
+			"query": "What are the pros and cons of different web development frameworks?",
+			"context_limit": 6,
+			"filter_subject": "web_development",
+			"similarity_threshold": 0.8,
+			"prompt_template": "comparative_analysis",
+			"llm_temperature": 0.5
+		},
+		{
+			"name": "Data Science Career Path",
+			"description": "Personalized guidance for data science learning journey",
+			"query": "How should I start learning data science and what books should I read?",
+			"context_limit": 5,
+			"filter_subject": null,
+			"similarity_threshold": 0.7,
+			"prompt_template": "personalized_recommendation",
+			"llm_temperature": 0.7
+		},
+		{
+			"name": "Advanced Programming Concepts",
+			"description": "Deep dive into advanced programming topics",
+			"query": "Explain advanced programming concepts like design patterns and software architecture",
+			"context_limit": 4,
+			"filter_subject": "programming",
+			"similarity_threshold": 0.5,
+			"prompt_template": "technical_explanation",
+			"llm_temperature": 0.4
+		}
+	],
+	"experiments": [
+		{
+			"name": "Context Amount Impact",
+			"description": "Test how different amounts of context affect response quality",
+			"base_query": "Recommend books for learning Python",
+			"context_limits": [
+				1,
+				3,
+				5,
+				8
+			],
+			"filter_subject": "programming"
+		},
+		{
+			"name": "Temperature Effect",
+			"description": "Compare responses with different creativity levels",
+			"base_query": "What makes a good programming book?",
+			"context_limit": 4,
+			"temperatures": [
+				0.1,
+				0.5,
+				0.9
+			],
+			"filter_subject": "programming"
+		},
+		{
+			"name": "Prompt Template Comparison",
+			"description": "Compare different ways of structuring the same information",
+			"base_query": "Which book should I read first for machine learning?",
+			"context_limit": 3,
+			"templates": [
+				"beginner_recommendations",
+				"technical_explanation",
+				"comparative_analysis"
+			],
+			"filter_subject": "ai"
+		},
+		{
+			"name": "Context Quality vs Quantity",
+			"description": "Compare high-relevance few results vs lower-relevance many results",
+			"base_query": "Best books for web development",
+			"scenarios": [
+				{
+					"context_limit": 3,
+					"similarity_threshold": 0.3,
+					"name": "High Quality"
+				},
+				{
+					"context_limit": 8,
+					"similarity_threshold": 0.8,
+					"name": "High Quantity"
+				}
+			],
+			"filter_subject": "web_development"
+		}
+	],
+	"evaluation": {
+		"metrics": [
+			"response_length",
+			"specificity_score",
+			"coherence_rating",
+			"context_utilization",
+			"factual_accuracy"
+		],
+		"human_evaluation_criteria": [
+			"Does the response directly address the user's question?",
+			"Are the book recommendations relevant and well-justified?",
+			"Is the explanation clear and easy to understand?",
+			"Does the response use the provided context effectively?",
+			"Would this response be helpful to the target audience?"
+		]
+	}
+}

@@ -1,0 +1,16 @@
+title,authors,year,subject,description,isbn,pages
+"Python Programming for Beginners","John Smith",2020,programming,"A comprehensive guide to learning Python programming from scratch.",978-1234567890,350
+"Machine Learning Fundamentals","Sarah Johnson, Mike Davis",2021,ai,"Introduction to machine learning concepts and algorithms.",978-2345678901,420
+"Web Development with JavaScript","Alice Brown",2019,web_development,"Modern web development techniques using JavaScript and frameworks.",978-3456789012,280
+"Deep Learning Neural Networks","Robert Chen",2022,ai,"Advanced deep learning techniques and neural network architectures.",978-4567890123,520
+"Advanced Python Techniques","Emily Wilson",2021,programming,"Advanced Python programming patterns and best practices.",978-5678901234,390
+"React and Modern Frontend","David Lee, Jennifer Taylor",2022,web_development,"Building modern web applications with React and contemporary tools.",978-6789012345,310
+"Computer Vision Applications","Maria Garcia",2020,ai,"Practical computer vision applications and image processing techniques.",978-7890123456,450
+"Database Design Principles","Thomas Anderson",2019,programming,"Fundamental principles of database design and optimization.",978-8901234567,320
+"CSS Grid and Flexbox","Lisa Park",2021,web_development,"Modern CSS layout techniques with Grid and Flexbox.",978-9012345678,250
+"Natural Language Processing","Kevin Zhang, Anna Rodriguez",2022,ai,"NLP techniques for text analysis and language understanding.",978-0123456789,480
+"Algorithms and Data Structures","Michael Brown",2020,programming,"Essential algorithms and data structures for programming interviews.",978-1122334455,400
+"Node.js Backend Development","Jennifer White",2021,web_development,"Server-side JavaScript development with Node.js and Express.",978-2233445566,360
+"Reinforcement Learning","Alex Kim",2022,ai,"Introduction to reinforcement learning and its applications.",978-3344556677,380
+"Software Architecture Patterns","Rachel Green",2020,programming,"Design patterns and architectural principles for scalable software.",978-4455667788,420
+"Progressive Web Apps","Daniel Martinez",2021,web_development,"Building offline-capable web applications with PWA technologies.",978-5566778899,290 

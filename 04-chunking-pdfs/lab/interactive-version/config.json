@@ -1,0 +1,17 @@
+{
+	"pdf_path": "../data/alice.pdf",
+	"pdf_id": "alice_in_wonderland",
+	"chunk_size": 300,
+	"chunk_overlap": 50,
+	"database": {
+		"host": "localhost",
+		"port": "5050",
+		"database": "pgvector",
+		"user": "postgres",
+		"password": "postgres"
+	},
+	"embedding": {
+		"model": "bge-m3",
+		"ollama_url": "http://localhost:11434/api/embed"
+	}
+}

@@ -1,0 +1,88 @@
+{
+	"database": {
+		"host": "localhost",
+		"port": "5050",
+		"database": "pgvector",
+		"user": "postgres",
+		"password": "postgres"
+	},
+	"embedding": {
+		"model": "bge-m3",
+		"ollama_url": "http://localhost:11434/api/embed"
+	},
+	"searches": [
+		{
+			"name": "AI Books Discovery",
+			"query": "artificial intelligence and machine learning algorithms",
+			"filter_subject": "ai",
+			"limit": 5,
+			"similarity_threshold": 0.7,
+			"description": "Find the most relevant AI and machine learning books"
+		},
+		{
+			"name": "Programming Best Practices",
+			"query": "software development best practices and design patterns",
+			"filter_subject": "programming",
+			"limit": 8,
+			"similarity_threshold": 0.6,
+			"description": "Discover books about programming methodologies and patterns"
+		},
+		{
+			"name": "Web Development Frameworks",
+			"query": "modern web development frameworks and frontend technologies",
+			"filter_subject": "web_development",
+			"limit": 6,
+			"similarity_threshold": 0.65,
+			"description": "Find books about contemporary web development tools"
+		},
+		{
+			"name": "Cross-Subject Technology Search",
+			"query": "building scalable software systems with modern technology",
+			"filter_subject": null,
+			"limit": 10,
+			"similarity_threshold": 0.75,
+			"description": "Search across all subjects for technology-related content"
+		},
+		{
+			"name": "Beginner-Friendly Programming",
+			"query": "introduction to programming for beginners step by step",
+			"filter_subject": "programming",
+			"limit": 5,
+			"similarity_threshold": 0.5,
+			"description": "Find beginner-friendly programming books"
+		}
+	],
+	"experiments": [
+		{
+			"name": "Similarity Threshold Comparison",
+			"base_query": "python programming",
+			"thresholds": [
+				0.3,
+				0.5,
+				0.7,
+				0.9
+			],
+			"description": "Compare results with different similarity thresholds"
+		},
+		{
+			"name": "Distance Metric Comparison",
+			"base_query": "machine learning fundamentals",
+			"metrics": [
+				"cosine",
+				"euclidean",
+				"inner_product"
+			],
+			"description": "Compare different distance metrics for the same query"
+		},
+		{
+			"name": "Query Specificity Impact",
+			"queries": [
+				"programming",
+				"python programming",
+				"python web development",
+				"python web development with django framework"
+			],
+			"description": "See how query specificity affects results"
+		}
+	]
+}

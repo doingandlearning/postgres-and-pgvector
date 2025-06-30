@@ -1,0 +1,26 @@
+{
+	"data_source": "open_library",
+	"categories": [
+		"programming",
+		"ai",
+		"web_development",
+		"computer_science"
+	],
+	"books_per_category": 10,
+	"database": {
+		"host": "localhost",
+		"port": "5050",
+		"database": "pgvector",
+		"user": "postgres",
+		"password": "postgres"
+	},
+	"embedding": {
+		"model": "bge-m3",
+		"ollama_url": "http://localhost:11434/api/embed"
+	},
+	"processing": {
+		"batch_size": 5,
+		"retry_attempts": 3,
+		"delay_between_requests": 0.5
+	}
+}
