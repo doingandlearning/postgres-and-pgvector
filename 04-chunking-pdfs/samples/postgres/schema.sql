@@ -6,5 +6,9 @@ CREATE TABLE
     pdf_id TEXT,
     page INTEGER,
     text TEXT,
-    embedding VECTOR(384)
+    embedding VECTOR(1024),
+    metadata JSONB,
+    start INTEGER,
+    end INTEGER
   ); 
+

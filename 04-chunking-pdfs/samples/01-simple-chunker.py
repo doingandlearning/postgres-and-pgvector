@@ -17,6 +17,8 @@ def chunks_from_pdf(path, tokens=300, overlap=50):
             # Store each word with its 1-indexed page number
             words_with_pages.extend([(word, i + 1) for word in text.split()])
 
+    # [('the', 1), ('adventures', 1), ('of', 1)]
+
     # Create chunks from the word list
     for start in range(0, len(words_with_pages), tokens - overlap):
         chunk_data = words_with_pages[start : start + tokens]
@@ -35,7 +37,8 @@ chunk_count = 0
 for page_num, chunk in chunks_from_pdf(pdf_path):
     chunk_count += 1
     print(f"--- Chunk {chunk_count} (Page {page_num}, first 50 chars) ---")
-    print(f"'{chunk[:50]}...'")
+    print(f"'{chunk[:50]}...' ...'{chunk[len(chunk) - 50:]}'")
+    chunk_words = chunk.split()
     # To embed this chunk, you would call:
     # embedding = get_embedding(chunk)
     # print(f"Embedding dimensions: {len(embedding)}") 
