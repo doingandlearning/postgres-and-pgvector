@@ -6,3 +6,13 @@ Content-Type: application/json
 	"model": "bge-m3",
 	"input": "Hello world"
 }
+
+### Verify the model is working with a different model
+POST https://api.openai.com/v1/embeddings
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "model": "text-embedding-3-small",
+    "input": "Hello world"
+}

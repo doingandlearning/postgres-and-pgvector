@@ -15,6 +15,23 @@ DB_CONFIG = {
     "port": "5050",
 }
 
+OPENAI_API_URL = "https://api.openai.com/v1/embeddings"
+OPENAI_API_KEY = ""
+def get_embedding_openai(text: str):
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {OPENAI_API_KEY}"
+    }
+    json_data = {
+        "model": "text-embedding-3-small",
+        "input": text
+    }
+
+    response = requests.post(OPENAI_API_URL, headers=headers, json=json_data)
+    response.raise_for_status()
+    data = response.json()
+
+    return data["data"][0]["embedding"]
 
 def get_embedding(text: str):
     response = requests.post(OLLAMA_URL, json={"model": "bge-m3", "input": text})
@@ -52,7 +69,7 @@ def load_books_to_db():
 
         # Generate embedding
         # embedding = "[" + ",".join(["0"] * 1536) + "]"        # Placeholder embedding
-        embedding = get_embedding(description)  # OpenAI
+        embedding = get_embedding(description) 
         cur.execute(
             """
             INSERT INTO items (name, item_data, embedding)

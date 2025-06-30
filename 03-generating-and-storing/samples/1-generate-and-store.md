@@ -21,7 +21,6 @@ print("Up and running")
 
 - Create a requirements.txt file at the project root
 
-
 - Update the compose.yml to create a new service that will run this script
 
 # Generate embedding from string
@@ -29,33 +28,12 @@ print("Up and running")
 - Test over HTTP
 - Create function, restart docker container
 
-```
-import ollama
-
+```python
 def get_embedding(text: str):
-  response = ollama.embed(
-    model="bge-m3",
-    input=text
-  )
-  return response["embeddings"][0]
+    response = requests.post(OLLAMA_URL, json={"model": "bge-m3", "input": text})
+    data = response.json()
 
-print(get_embedding("Hello world"))
-```
-
-- Update the requirements.txt
-```
-annotated-types==0.7.0
-anyio==4.8.0
-certifi==2024.12.14
-h11==0.14.0
-httpcore==1.0.7
-httpx==0.27.2
-idna==3.10
-ollama==0.4.5
-pydantic==2.10.5
-pydantic_core==2.27.2
-sniffio==1.3.1
-typing_extensions==4.12.2
+    return data["embeddings"][0]
 ```
 
 - Verify that the embeddings match
@@ -124,4 +102,3 @@ docker exec -it pgvector-db psql -U postgres -d pgvector
 ```sql
 SELECT * FROM items;
 ```
-
