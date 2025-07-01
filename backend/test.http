@@ -1,0 +1,11 @@
+GET http://localhost:5100/health
+
+###
+
+POST http://localhost:5100/query
+Content-Type: application/json
+
+	{
+  "query": "What are the frequency allocations for VHF FM broadcasting?",
+  "top_k": 5
+}

@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS
     pdf_id TEXT,
     page INTEGER,
     text TEXT,
-    embedding VECTOR(1024)
+    embedding VECTOR(1024),
+    metadata JSONB
   ); 
 
