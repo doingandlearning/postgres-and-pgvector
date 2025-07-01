@@ -1,6 +1,5 @@
 import requests
-import psycopg2
-from psycopg2.extras import Json
+import psycopg
 import json
 import os
 from dotenv import load_dotenv
@@ -36,18 +35,18 @@ def query_items(user_query, top_n=5):
         query_embedding = get_embedding_ollama(user_query)
         print(query_embedding)
         # Connect to PostgreSQL
-        conn = psycopg2.connect(**DB_CONFIG)
+        conn = psycopg.connect(**DB_CONFIG)
         cursor = conn.cursor()
 
         # SQL Query: Find items using cosine similarity
         sql = """
         SELECT name, item_data
         FROM items
-        ORDER BY embedding <=> %s  -- Cosine similarity search
+        ORDER BY embedding <=> %s::vector  -- Cosine similarity search
         LIMIT %s;
         """
 
-        cursor.execute(sql, (Json(query_embedding), top_n))
+        cursor.execute(sql, (query_embedding, top_n))
         results = cursor.fetchall()
 
         cursor.close()
@@ -83,7 +82,7 @@ HEADERS = {
     "Content-Type": "application/json"
 }
 
-def enhance_with_openai(books):
+def enhance_with_openai(books, user_query=None):
     """Send retrieved book data to OpenAI LLM for enhancement."""
     
     if not books or isinstance(books, str):
@@ -97,12 +96,22 @@ def enhance_with_openai(books):
         ]
     )
 
-    # OpenAI prompt
-    prompt = f"""
-    Here are some books on programming:
-    {book_text}
+    print(book_text)
 
-    Summarize this list and recommend the best ones for a beginner, intermediate, and advanced programmer.
+    # OpenAI prompt - prompt engineering is a practice of crafting effective prompts
+    # to get the best results from LLMs. Here we ask the model to summarize
+    # the list of books and recommend the best ones for different skill levels.
+    # This is a simple example of prompt engineering.
+    # You can modify the prompt to suit your needs.
+    prompt = f"""
+    Here are some books on programming, do not suggest any books that are not in the list:
+    <book-list>
+    {book_text}
+    </book-list>
+
+    Based on the following user query: "{user_query if user_query else 'No specific query provided'}",
+    please summarize the list of books and recommend the best ones for a beginner, intermediate, and
+    advanced programmer. Provide a brief explanation for each recommendation.
     """
 
     # Payload for OpenAI request
@@ -125,9 +134,34 @@ def enhance_with_openai(books):
     else:
         return f"Error: {response.status_code}, {response.text}"
 
+def use_openai_to_decide_on_response_quality(response, user_query=None):
+    """Use OpenAI to decide if the response is good enough."""
+    # This function can be used to send the response to OpenAI and get feedback
+    # on whether the response is good enough or not.
+    # Generate the query embedding using openai
+    payload = {
+        "model": "gpt-4",
+        "messages": [
+            {"role": "system", "content": "You are an expert in evaluating responses. You will determine if the response is good enough based on the user's query."},
+            {"role": "user", "content": f"Is the following response good enough? {response} based on {user_query} Return with 'yes' or 'no' and nothing else."}
+        ],
+        "temperature": 0.5,
+        "max_tokens": 50
+    }
+
+    response = requests.post(OPENAI_URL, headers=HEADERS, data=json.dumps(payload))
+    if response.status_code == 200:
+        return True if response.json()["choices"][0]["message"]["content"].strip().lower() == "yes" else False
+    else:
+        return f"Error: {response.status_code}, {response.text}"
+
 # Example user query
-items = query_items("tell me about all the books on programming you have available")
+user_query = input("Ask a question about programming books: ")
+items = query_items(user_query)
 print(items)
 
-enhanced_response = enhance_with_openai(items)
-print(enhanced_response)
+enhanced_response = enhance_with_openai(items, user_query)
+if not use_openai_to_decide_on_response_quality(enhanced_response):
+    print("The response is not good enough. Please try again.")
+else:
+    print(enhanced_response)

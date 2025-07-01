@@ -27,7 +27,7 @@ def query_openai(prompt, temperature, top_p):
         ],
         "temperature": temperature,
         "top_p": top_p,
-        "max_tokens": 100
+        "max_tokens": 150
     }
 
     response = requests.post(url, headers=headers, data=json.dumps(payload))
