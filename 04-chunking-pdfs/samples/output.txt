@@ -1,0 +1,1920 @@
+Page 1: diagram detected, rendering image.
+Page 2: no diagram detected.
+Page 3: no diagram detected.
+Page 4: no diagram detected.
+Page 5: no diagram detected.
+Page 6: no diagram detected.
+Page 7: no diagram detected.
+Page 8: no diagram detected.
+Page 9: no diagram detected.
+Page 10: no diagram detected.
+Page 11: no diagram detected.
+Page 12: no diagram detected.
+Page 13: no diagram detected.
+Page 14: no diagram detected.
+Page 15: no diagram detected.
+Page 16: no diagram detected.
+Page 17: no diagram detected.
+Page 18: no diagram detected.
+Page 19: no diagram detected.
+Page 20: no diagram detected.
+Page 21: no diagram detected.
+Page 22: no diagram detected.
+Page 23: no diagram detected.
+Page 24: no diagram detected.
+Page 25: no diagram detected.
+Page 26: no diagram detected.
+Page 27: no diagram detected.
+Page 28: no diagram detected.
+Page 29: diagram detected, rendering image.
+Page 30: diagram detected, rendering image.
+Page 31: diagram detected, rendering image.
+Page 32: diagram detected, rendering image.
+Page 33: diagram detected, rendering image.
+Page 34: no diagram detected.
+Page 35: no diagram detected.
+Page 36: diagram detected, rendering image.
+Page 37: diagram detected, rendering image.
+Page 38: diagram detected, rendering image.
+Page 39: diagram detected, rendering image.
+Page 40: no diagram detected.
+Page 41: diagram detected, rendering image.
+Page 42: no diagram detected.
+Page 43: no diagram detected.
+Page 44: diagram detected, rendering image.
+Page 45: diagram detected, rendering image.
+Page 46: no diagram detected.
+Page 47: diagram detected, rendering image.
+Page 48: diagram detected, rendering image.
+Page 49: diagram detected, rendering image.
+Page 50: diagram detected, rendering image.
+Page 51: diagram detected, rendering image.
+Page 52: no diagram detected.
+Page 53: no diagram detected.
+Page 54: diagram detected, rendering image.
+Page 55: diagram detected, rendering image.
+Page 56: diagram detected, rendering image.
+Page 57: diagram detected, rendering image.
+Page 58: diagram detected, rendering image.
+Page 59: no diagram detected.
+Page 60: no diagram detected.
+Page 61: diagram detected, rendering image.
+Page 62: diagram detected, rendering image.
+Page 63: diagram detected, rendering image.
+Page 64: diagram detected, rendering image.
+Page 65: diagram detected, rendering image.
+Page 66: diagram detected, rendering image.
+Page 67: diagram detected, rendering image.
+Page 68: no diagram detected.
+Page 69: diagram detected, rendering image.
+Page 70: diagram detected, rendering image.
+Page 71: diagram detected, rendering image.
+Page 72: no diagram detected.
+Page 73: no diagram detected.
+Page 74: diagram detected, rendering image.
+Page 75: diagram detected, rendering image.
+Page 76: diagram detected, rendering image.
+Page 77: diagram detected, rendering image.
+Page 78: diagram detected, rendering image.
+Page 79: no diagram detected.
+Page 80: no diagram detected.
+Page 81: no diagram detected.
+Page 82: no diagram detected.
+Page 83: no diagram detected.
+Page 84: no diagram detected.
+Page 85: no diagram detected.
+Page 86: no diagram detected.
+Page 87: no diagram detected.
+Page 88: no diagram detected.
+Page 89: no diagram detected.
+Page 90: no diagram detected.
+Page 91: no diagram detected.
+Page 92: no diagram detected.
+Page 93: no diagram detected.
+Page 94: no diagram detected.
+Page 95: no diagram detected.
+Page 96: no diagram detected.
+Page 97: no diagram detected.
+Page 98: no diagram detected.
+Page 99: no diagram detected.
+Page 100: no diagram detected.
+--- Chunk ID: 8a9ccd29-3e84-4b58-9a89-b0c2e7363c48 ---
+Page: 1
+Type: page_image_reference
+Length: 217 characters
+Embedding: [7, 7, 7, 7, 7]
+Content preview:
+of the Regional Administrative Conference
+for the Planning of VHF Sound Broadcasting
+(Region 1 and Part of Region 3)
+Geneva, 1984
+Published by the
+International
+Telecommunication Union
+GENEVA, 1984
+
+{{ PAGE_IMAGE_1 }}
+
+--- Chunk ID: 015f8159-29d2-42a1-86c8-e13d8055a741 ---
+Page: 2
+Type: rule_or_definition
+Length: 0 characters
+Embedding: [0, 0, 0, 0, 0]
+Content preview:
+
+
+--- Chunk ID: c85c755a-f5f7-42a4-927f-4a12bae7ec23 ---
+Page: 3
+Type: rule_or_definition
+Length: 3898 characters
+Embedding: [8, 8, 8, 8, 8]
+Content preview:
+– III –
+TABLE OF CONTENTS
+Regional Agreement relating to the Use of the Band 87.5 - 108 MHz
+for FM Sound Broadcasting
+(Region 1 and Part of Region 3)
+Page
+Preamble.........................................................................................................................................
+
+--- Chunk ID: 3e143b1e-c0b9-4913-bc58-aa9cc1b1b596 ---
+Page: 4
+Type: rule_or_definition
+Length: 3345 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+– IV –
+Annex 3 Basic characteristics of sound broadcasting stations to be submitted for modifications to the Plan
+in application of Article 4 of the Agreement....................................................................................... 53
+Annex 4 Limits for determining when coordination wi
+
+--- Chunk ID: 9c0fe88a-b25b-4497-a0bc-6f4a7c2bc4b7 ---
+Page: 5
+Type: rule_or_definition
+Length: 3012 characters
+Embedding: [2, 2, 2, 2, 2]
+Content preview:
+– V –
+Page
+RESOLUTIONS
+Resolution No. 1 Modifications to the Plan Before the Entry into Force of the Agreement................................ 83
+Resolution No. 2 Procedure Relating to Mobile Services in the Band 87.5 - 88 MHz........................................ 83
+Resolution No. 3 Procedure rel
+
+--- Chunk ID: 7766a042-1a03-4c60-bac2-67d6acc5e2c2 ---
+Page: 6
+Type: rule_or_definition
+Length: 0 characters
+Embedding: [0, 0, 0, 0, 0]
+Content preview:
+
+
+--- Chunk ID: 254ae92d-2d6e-4dce-937d-747796cd042d ---
+Page: 7
+Type: rule_or_definition
+Length: 2577 characters
+Embedding: [7, 7, 7, 7, 7]
+Content preview:
+– 1 –
+REGIONAL AGREEMENT
+relating to the Use of the Band 87.5 - 108 MHz
+for FM Sound Broadcasting
+(Region 1 and Part of Region 3)
+PREAMBLE
+The duly accredited delegates of the following Members of the International Telecommunication Union:
+Democratic Republic of Afghanistan, Socialist People’s Repub
+
+--- Chunk ID: e2c0161a-a97a-4852-89f4-6304ad88ee0e ---
+Page: 8
+Type: rule_or_definition
+Length: 3104 characters
+Embedding: [4, 4, 4, 4, 4]
+Content preview:
+Agreement – 2 –
+ARTICLE 1
+Definitions
+Agreement
+For the purposes of this Agreement, the following terms shall have the meanings defined below:
+1.1 Union: The International Telecommunication Union.
+1.2 Secretary-General: The Secretary-General of the Union.
+1.3 IFRB: The International Frequency Regist
+
+--- Chunk ID: dc026dd2-c89e-446f-8712-d5152e7ca717 ---
+Page: 9
+Type: rule_or_definition
+Length: 3086 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 3 – Agreement
+ARTICLE 3
+Annexes to the Agreement
+The Agreement contains the following Annexes:
+3.1 Annex 1: The Plan
+Frequency Assignment Plan for FM Sound Broadcasting Stations in Region 1 and Part of Region 3 in the
+band 87.5 - 108 MHz.
+3.1.1 The Plan contains frequency assignments and associate
+
+--- Chunk ID: 29347305-0d72-49ac-a162-5477d8239363 ---
+Page: 10
+Type: rule_or_definition
+Length: 3953 characters
+Embedding: [3, 3, 3, 3, 3]
+Content preview:
+Agreement – 4 –
+4.2 Initiation of the modification procedure
+4.2.1 Any administration proposing to modify the characteristics of an assignment appearing in the Plan or to add a
+new assignment to the Plan shall obtain the agreement of any other administration whose services are likely to be
+affected.
+
+--- Chunk ID: d5a02697-3578-4568-af8d-3c8db5eddc31 ---
+Page: 11
+Type: rule_or_definition
+Length: 4268 characters
+Embedding: [8, 8, 8, 8, 8]
+Content preview:
+– 5 – Agreement
+4.2.6 When requesting the agreement of another administration, the administration proposing to modify the Plan
+may also communicate any additional information relating to proposed methods and criteria to be used as well as other
+details concerning the terrain, particular propagation 
+
+--- Chunk ID: b6a20518-3f4b-435d-accd-5dd0711f0228 ---
+Page: 12
+Type: rule_or_definition
+Length: 4049 characters
+Embedding: [9, 9, 9, 9, 9]
+Content preview:
+Agreement – 6 –
+4.3.7.2 a television station, it should normally accept an increase in the usable field strength at the transmitter site,
+provided that:
+– the resulting usable field strength is not greater than 52 dB(m V/m), or
+– the resulting usable field strength is greater than 52 dB(m V/m), but 
+
+--- Chunk ID: 28d3a57f-f2f7-4acc-bef8-ebc10cec9c21 ---
+Page: 13
+Type: rule_or_definition
+Length: 4179 characters
+Embedding: [9, 9, 9, 9, 9]
+Content preview:
+– 7 – Agreement
+These limits apply when the frequency of the sound broadcasting station coincides with the frequency of the
+station of the mobile service. If they do not coincide, an appropriate allowance should be made (see Annex 5,
+Chapter 2).
+The interfering field strengths are calculated using t
+
+--- Chunk ID: 577c2bf8-2bfe-49aa-81bb-cc9e7153daec ---
+Page: 14
+Type: rule_or_definition
+Length: 2780 characters
+Embedding: [0, 0, 0, 0, 0]
+Content preview:
+Agreement – 8 –
+4.6.2 The IFRB shall publish in the special section of its weekly circular the information received under sections
+4.2.5 or 4.6.1 together with the names of any administrations with which the provisions of this article have been
+successfully applied. With respect to Contracting Membe
+
+--- Chunk ID: 19c57c87-f4ec-4883-ac27-6186e4677ff7 ---
+Page: 15
+Type: rule_or_definition
+Length: 4121 characters
+Embedding: [1, 1, 1, 1, 1]
+Content preview:
+– 9 – Agreement
+5.2 Implementation of the Plan
+5.2.1 Type A1, A2 and B2 interference
+5.2.1.1 Before bringing into use an assignment in the Plan which bears a symbol A1/. . ., A2/. . . or B2/. . ., the
+administration responsible for the sound broadcasting station shall inform the administration desig
+
+--- Chunk ID: 587cd0b0-3a6e-4e59-86f3-17e6b43e0e61 ---
+Page: 16
+Type: rule_or_definition
+Length: 4086 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+Agreement – 10 –
+5.2.2.6 In case of disagreement, the following measures shall be envisaged:
+a) reduction of power of all sound broadcasting stations contributing to the incompatibility in the direction
+of the test point considered (by reducing the transmitter output power, by reducing the effective
+
+--- Chunk ID: ff4a4d6b-ada3-48ed-8460-71c59c875cc9 ---
+Page: 17
+Type: rule_or_definition
+Length: 2772 characters
+Embedding: [2, 2, 2, 2, 2]
+Content preview:
+– 11 – Agreement
+ARTICLE 6
+Continued Coordination of Assignments Appearing
+in the Appendix to the Plan
+6.1 The requirements concerning assignments which cause a nuisance field strength higher than 60 dB/m V/m to
+other assignments and which have not secured all the necessary agreements during the Con
+
+--- Chunk ID: 4e6b1caa-7052-4de6-bb43-0802ec666b81 ---
+Page: 18
+Type: rule_or_definition
+Length: 1994 characters
+Embedding: [4, 4, 4, 4, 4]
+Content preview:
+Agreement – 12 –
+ARTICLE 8
+Accession to the Agreement
+8.1 Any Member of the Union in the planning area which has not signed the Agreement may at any time deposit
+an instrument of accession with the Secretary-General, who shall immediately inform the other Members of the Union.
+Accession to the Agree
+
+--- Chunk ID: f4e15d38-d4e4-4848-8665-c7fdaa58d1c3 ---
+Page: 19
+Type: rule_or_definition
+Length: 2340 characters
+Embedding: [0, 0, 0, 0, 0]
+Content preview:
+– 13 – Agreement
+ARTICLE 12
+Revision of the Agreement
+12.1 No revision of this Agreement shall be undertaken except by a competent administrative radio conference
+convened in accordance with the procedure laid down in the Convention, to which at least all the Members of the Union
+in the planning are
+
+--- Chunk ID: 43b83a87-cece-4850-9fce-7bdf8b955813 ---
+Page: 20
+Type: rule_or_definition
+Length: 1552 characters
+Embedding: [2, 2, 2, 2, 2]
+Content preview:
+– 14 –
+For Denmark:
+For Austria:
+JØRN BACH
+LETTNER G.
+ARNE FOXMAN
+PRULL F.
+J. A. HEEGAARD
+JØRN ANDERSEN
+JØRGEN WEBER
+For Belgium:
+For the Arab Republic of Egypt:
+TASTENOY R.
+GEWILLIG M.
+M. FAWZY YASSIN
+HAUSEUX R.
+OLFAT A. SHAWKAT
+MAHMOUD ABDEL WANIS KABEIL
+For the People’s Republic of Benin:
+For Spa
+
+--- Chunk ID: de2c39f9-bae5-44c4-93ae-05bc09f4aeb9 ---
+Page: 21
+Type: rule_or_definition
+Length: 1471 characters
+Embedding: [1, 1, 1, 1, 1]
+Content preview:
+– 15 –
+For Ireland: For the Republic of Malta:
+SEAMUS MORAN ALFRED FALZON
+THOMAS A. DEMPSEY JOSEPH BARTOLO
+MICHAEL J. C. CURLEY ANTHONY VELLA
+ALEXANDER BONNICI
+For the State of Israel:
+For the Kingdom of Morocco:
+E. NISSIM
+J. NITSAN ALI SKALLI
+MOHAMMED HAMMOUDA
+For Italy: AHMED TOUMI
+A. PETTI For Mo
+
+--- Chunk ID: 228114d5-f34c-4a1d-9146-a78fddeb9e17 ---
+Page: 22
+Type: rule_or_definition
+Length: 1274 characters
+Embedding: [4, 4, 4, 4, 4]
+Content preview:
+– 16 –
+For the German Democratic Republic: For the Republic of Chad:
+HANS-J. HAMMER HAMID KANTE
+BENDOLEM TABA
+For the Ukrainian Soviet Socialist Republic:
+For the Czechoslovak Socialist Republic:
+YOURI MALKO
+JÍRA JI¤Í
+For the Socialist Republic of Romania:
+For the Togolese Republic:
+ANDREI CHIRICA
+G
+
+--- Chunk ID: 2de33059-40b5-460a-b968-f7bc844d179f ---
+Page: 23
+Type: rule_or_definition
+Length: 2146 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 17 –
+ANNEX 1
+Frequency Assignment Plan for FM Sound Broadcasting Stations
+in Region 1 and Part of Region 3 in the Band 87.5 - 108 MHz
+Information included in the columns of the Plan
+Note by the General Secretariat: The Plan, as described in Article 3 of the Agreement, is published in the form of m
+
+--- Chunk ID: cc8a17cd-33fe-4e5d-89dd-e836015d712c ---
+Page: 24
+Type: rule_or_definition
+Length: 3506 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+Annex 1 – 18 –
+Meaning of the Symbols in the “Remarks” column
+(column 19 of the Plan)
+Annex 1
+A1/. . . When it is brought into service this assignment may cause type A1, A2, B2 interference to one or more
+A2/. . . aeronautical radionavigation stations of the countries whose symbols are given after t
+
+--- Chunk ID: 2b41f7f4-f937-4e33-9c3c-417d33e4da34 ---
+Page: 25
+Type: rule_or_definition
+Length: 2169 characters
+Embedding: [9, 9, 9, 9, 9]
+Content preview:
+– 19 –
+ANNEX 2
+Technical data
+These data were used for the preparation of the Plan.
+They shall also be used for Plan modification procedures.
+CHAPTER 1
+Definitions
+The following definitions supplement those contained in the International Telecommunication Convention and
+in the Radio Regulations.
+1.1
+
+--- Chunk ID: d9c3f627-3b1e-4d87-a9d3-a69d34e84331 ---
+Page: 26
+Type: rule_or_definition
+Length: 2669 characters
+Embedding: [9, 9, 9, 9, 9]
+Content preview:
+Annex 2 – 20 –
+CHAPTER 2
+Propagation
+Annex 2
+2.1 Propagation data for the VHF broadcasting service
+2.1.1 General
+The propagation data given in this chapter were used for the planning of the broadcasting service. They relate
+field strength to path length and the effective transmitting antenna height.
+
+--- Chunk ID: 9e731bed-993e-4ac3-9163-df33e38bad51 ---
+Page: 27
+Type: rule_or_definition
+Length: 3113 characters
+Embedding: [3, 3, 3, 3, 3]
+Content preview:
+– 21 – Annex 2
+2.1.2.3 Mixed paths
+For both 1% and 50% of the time, mixed paths were evaluated according to the procedure set out in
+section 2.1.3.5.
+2.1.3 Application of the curves
+2.1.3.1 Time variability
+The field-strength values given in Figures 2.1 to 2.5, are those exceeded for 50% and 1% of t
+
+--- Chunk ID: d52e018a-c502-4dca-926c-9ca84e7a8ee8 ---
+Page: 28
+Type: rule_or_definition
+Length: 1549 characters
+Embedding: [9, 9, 9, 9, 9]
+Content preview:
+Annex 2 – 22 –
+Let:
+E : field strength for land path equal in length to the mixed path for t% of the time,
+L, t
+E : field strength for sea path equal in length to the mixed path for t% of the time,
+S, t
+E : field strength for mixed path for t% of the time,
+M, t
+d : length of sea path,
+S
+d : length o
+
+--- Chunk ID: 21b31c74-bf0a-4983-9b2d-5ca85d8a4080 ---
+Page: 29
+Type: table_reference
+Length: 485 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+– 23 – Annex 2
+FIGURE 2.1
+Field strength (dB(m V/m)) for 1 kW e.r.p.
+90
+80
+70
+60
+h = 1 200 m
+50 1
+h = 600 m
+1
+h = 300 m
+40 1
+30
+h = 150 m
+20 1
+h
+1
+= 7 5 m
+h = 37.5 m
+10 1
+0
+– 10
+– 20
+– 30
+– 40
+– 50
+10 20 50 100 200 400 600 800 1 000
+02-01
+))m/V
+(mBd(
+htgnerts
+dleiF
+Logarithmic scale Linear scale
+Dis
+
+--- Chunk ID: 8a95a3b4-dcc6-40d1-9496-2ba509609f45 ---
+Page: 30
+Type: table_reference
+Length: 436 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+Annex 2 – 24 –
+FIGURE 2.2
+Field strength (dB(m V/m)) for 1 kW e.r.p.
+90
+80
+70
+60
+h = 1 200 m
+50 1
+h = 600 m
+1
+h = 300 m
+40 1
+30
+h = 150 m
+20 1
+h
+1
+= 7 5 m
+h = 37.5 m
+10 1
+0
+– 10
+– 20
+– 30
+– 40
+– 50
+10 20 50 100 200 400 600 800 1 000
+02-02
+))m/V
+(mBd(
+htgnerts
+dleiF
+Logarithmic scale Linear scale
+Dis
+
+--- Chunk ID: 8110ea71-b8cc-47aa-bcb5-750e189f0ebd ---
+Page: 31
+Type: table_reference
+Length: 436 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 25 – Annex 2
+FIGURE 2.3
+Field strength (dB(m V/m)) for 1 kW e.r.p.
+90
+80
+70
+60
+h = 1 200 m
+50 1
+h = 600 m
+1
+h = 300 m
+40 1
+30
+h = 150 m
+1
+20
+h = 75 m
+1
+h
+1
+= 37. 5 m
+10
+0
+– 10
+– 20
+– 30
+– 40
+– 50
+10 20 50 100 200 400 600 800 1 000
+02-03
+))m/V
+(mBd(
+htgnerts
+dleiF
+Logarithmic scale Linear scale
+Dis
+
+--- Chunk ID: 35bca763-792f-41a3-bd7e-4b4b233e08e7 ---
+Page: 32
+Type: table_reference
+Length: 440 characters
+Embedding: [0, 0, 0, 0, 0]
+Content preview:
+Annex 2 – 26 –
+FIGURE 2.4
+Field strength (dB(m V/m)) for 1 kW e.r.p.
+90
+80
+70
+60
+50
+h = 1 200 m
+1
+h = 600 m
+40 1
+h = 300 m
+1
+30
+h = 150 m
+20 1
+h = 75 m
+1
+10
+h
+1
+= 37. 5 m
+0
+– 10
+– 20
+– 30
+– 40
+– 50
+10 20 50 100 200 400 600 800 1 000
+02-04
+))m/V
+(mBd(
+htgnerts
+dleiF
+Logarithmic scale Linear scale
+Dis
+
+--- Chunk ID: 2d5037fb-6d36-41bc-8d03-8900468c27f8 ---
+Page: 33
+Type: table_reference
+Length: 512 characters
+Embedding: [2, 2, 2, 2, 2]
+Content preview:
+– 27 – Annex 2
+FIGURE 2.5
+Field strength (dB(m V/m)) for 1 kW e.r.p.
+90
+80
+70
+60
+50
+h = 1 200 m
+1
+h = 600 m
+40 1
+h = 300 m 1
+30
+h = 150 m
+20 1
+h = 75 m
+1
+10 hhh 111 === 333777.,. 555 mmm
+0
+– 10
+– 20
+– 30
+– 40
+– 50
+10 20 50 100 200 400 600 800 1 000
+02-05
+))m/V
+(mBd(
+htgnerts
+dleiF
+Logarithmic scale 
+
+--- Chunk ID: bd1f37ba-c19c-4127-91ac-2c6d5ec89461 ---
+Page: 34
+Type: rule_or_definition
+Length: 2647 characters
+Embedding: [7, 7, 7, 7, 7]
+Content preview:
+Annex 2 – 28 –
+CHAPTER 3
+Technical standards and transmission characteristics
+for the sound broadcasting service
+3.1 Transmission systems
+In planning, the following transmission systems were used, as specified by the administrations when notifying
+their requirements:
+System 1: Monophonic (maximum fr
+
+--- Chunk ID: 07054a73-1213-4b1c-981f-c576948bde34 ---
+Page: 35
+Type: rule_or_definition
+Length: 2550 characters
+Embedding: [0, 0, 0, 0, 0]
+Content preview:
+– 29 – Annex 2
+3.4 Protection ratios
+3.4.1 Monophonic transmissions
+The radio-frequency protection ratios required to give satisfactory monophonic reception for 99% of the time
+are given by the curve M2 in Figure 2.6 for systems using a maximum frequency deviation of – 75 kHz. For steady
+interferenc
+
+--- Chunk ID: 2a0fa213-ff1b-4b8a-8b86-0a419ec4ca0d ---
+Page: 36
+Type: table_reference
+Length: 723 characters
+Embedding: [3, 3, 3, 3, 3]
+Content preview:
+Annex 2 – 30 –
+FIGURE 2.6
+Radio-frequency protection ratio required by broadcasting services
+in band 8 (VHF) at frequencies between 87.5 MHz and 108 MHz
+using a maximum frequency deviation of ± 75 kHz
+60
+50
+40
+30
+20
+10
+0
+– 10
+– 20
+0 100 200 300 400
+02-06
+)Bd(
+soitar
+noitcetorp
+ycneuqerf-oidaR
+S1
+S2
+
+
+--- Chunk ID: 7700ba2e-d45e-4568-9045-f9496c7e9423 ---
+Page: 37
+Type: table_reference
+Length: 461 characters
+Embedding: [1, 1, 1, 1, 1]
+Content preview:
+– 31 – Annex 2
+TABLE 2.1
+Radio-frequency protection ratio (dB) for a maximum frequency deviation
+of – 75 kHz
+Frequency spacing Monophonic Stereophonic
+(kHz)
+Steady Tropospheric Steady Tropospheric
+interference interference interference interference
+0 36 28 45 37
+25 31 27 51 43
+50 24 22 51 43
+75 16 1
+
+--- Chunk ID: 10ae40d8-445e-490e-86d1-a26f01f80f32 ---
+Page: 38
+Type: table_reference
+Length: 722 characters
+Embedding: [2, 2, 2, 2, 2]
+Content preview:
+Annex 2 – 32 –
+FIGURE 2.7
+Radio-frequency protection ratio required by broadcasting services
+in band 8 (VHF) at frequencies between 87.5 MHz and 108 MHz
+using a maximum frequency deviation of ± 50 kHz
+60
+S1
+50
+S2
+40
+M1
+30
+M2
+20
+10
+0
+– 10
+– 20
+0 100 200 300 400
+02-07
+)Bd(
+oitar
+noitcetorp
+ycneuqerf-o
+
+--- Chunk ID: b1e8d487-6331-45c3-a483-f5105987e286 ---
+Page: 39
+Type: table_reference
+Length: 1305 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+– 33 – Annex 2
+TABLE 2.2
+Radio-frequency protection ratio (dB) for a maximum frequency deviation
+of – 50 kHz
+Frequency spacing Monophonic Stereophonic
+(kHz)
+Steady Tropospheric Steady Tropospheric
+interference interference interference interference
+0 39 32 49 41
+25 32 28 53 45
+50 24 22 51 43
+75 15 1
+
+--- Chunk ID: c4c00a48-b5b4-4f61-91bf-c30ae2db0ec8 ---
+Page: 40
+Type: rule_or_definition
+Length: 2523 characters
+Embedding: [3, 3, 3, 3, 3]
+Content preview:
+Annex 2 – 34 –
+3.5 Calculation of nuisance field
+To apply the protection-ratio curves of Figures 2.6 and 2.7, it is necessary to determine whether, in the
+particular circumstances, the interference is to be regarded as steady or tropospheric1 . A suitable criterion for this is
+provided by the concep
+
+--- Chunk ID: b7230d3a-f634-4b1e-bb37-1e4795e233da ---
+Page: 41
+Type: table_reference
+Length: 2002 characters
+Embedding: [2, 2, 2, 2, 2]
+Content preview:
+– 35 – Annex 2
+For mixed polarized transmissions, the effective radiated powers and radiation patterns have been specifed
+separately for the horizontally and vertically polarized components.
+3.8.2 Receiving antennas
+For stereophonic transmissions, the directivity curve in Figure 2.8 was taken into a
+
+--- Chunk ID: f5fb5008-cc93-4f02-8754-faecefd326e6 ---
+Page: 42
+Type: rule_or_definition
+Length: 1827 characters
+Embedding: [7, 7, 7, 7, 7]
+Content preview:
+Annex 2 – 36 –
+CHAPTER 4
+Determination of the usable field strength
+by the simplified multiplication method
+4.1 Principle of calculation
+The usable field strength is determined for a specified coverage probability (with respect to time and location)
+and depends on the values of the nuisance fields:
+
+
+--- Chunk ID: 8b3e833a-e98a-417f-9b40-9c8c79c9db75 ---
+Page: 43
+Type: rule_or_definition
+Length: 1545 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+– 37 – Annex 2
+This integration can, however, be avoided in the practical calculation by replacing it with a polynomial
+approximation as follows:
+L(x) = 1 – ½(1 + a x + a x2 + a x3 + a x4)–4 + e (x)
+1 2 3 4
+with
+a = 0.196854
+1
+a = 0.115194
+2
+a = 0.000344
+3
+a = 0.019527
+4
+e (x) represents the error b
+
+--- Chunk ID: ded452da-b3b3-4403-b729-d4e435ceed1c ---
+Page: 44
+Type: table_reference
+Length: 2660 characters
+Embedding: [0, 0, 0, 0, 0]
+Content preview:
+Annex 2 – 38 –
+TABLE 2.4
+x
+Probability integral j ( x ) = 2 (cid:242) [exp(- t2 /2)] dt
+2p
+0
+x j (x) x j (x) x j (x) x j (x)
+0.00 0.0000 0.60 0.4515 1.20 0.7699 1.80 0.9281
+01 0.0080 61 0.4581 21 0.7737 81 0.9297
+02 0.0160 62 0.4647 22 0.7775 82 0.9312
+03 0.0239 63 0.4713 23 0.7813 83 0.9328
+04 0.03
+
+--- Chunk ID: 84a79c45-722c-49fa-b4ab-9422daf38cd3 ---
+Page: 45
+Type: table_reference
+Length: 1038 characters
+Embedding: [8, 8, 8, 8, 8]
+Content preview:
+– 39 – Annex 2
+TABLE 2.5
+1. Approximation E = 78 dB s = 8.3 dB
+u n
+i ( E dB si ) z i = ( E dB u ) - E si x i = s z i l 2 (from j T (x a i b ) le 1) L(x i ) = s ( 2 x i ) + 2 1
+n
+1 64 14 1.19 0.7660 0.8830
+2 72 6 0.51 0.3899 0.6950
+3 60 18 1.53 0.8740 0.9370
+4 50 28 2.39 0.9831 0.9916
+5 45 33 2.81 0.
+
+--- Chunk ID: 7f35a9f3-c568-43d3-94f0-bb3698fd9d23 ---
+Page: 46
+Type: rule_or_definition
+Length: 3345 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+Annex 2 – 40 –
+CHAPTER 5
+Frequency compatibility between sound
+and television broadcasting
+5.1 Introduction
+Several countries are operating television transmitters using the D/SECAM system in the band 87.5 -
+100 MHz. All sound broadcasting requirements for stations in the area of coordination with c
+
+--- Chunk ID: e813f1c2-15bf-4d3c-ab5b-9dfb79b4fce0 ---
+Page: 47
+Type: table_reference
+Length: 2446 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 41 – Annex 2
+5.6.1.1 for the wanted television transmitter,
+– from Table 2.6 for interference from a television transmitter, or
+– from Figure 2.9 for interference from a sound broadcasting transmitter.
+Note – Since the protection ratio curve for the D/SECAM television broadcasting system against F
+
+--- Chunk ID: 9d2be054-5589-438c-a6f1-347749e1e227 ---
+Page: 48
+Type: table_reference
+Length: 404 characters
+Embedding: [4, 4, 4, 4, 4]
+Content preview:
+Annex 2 – 42 –
+50
+40
+30
+20
+10
+0
+– 2 – 1 0 1 2 3 4 5 6
+02-09
+)Bd(
+oitar
+noitcetorp
+FR
+FIGURE 2.9
+D/SECAM television system protection ratio
+in the case of frequency-modulated
+sound broadcasting tropospheric interference*
+Frequency relative to vision carrier (MHz)
+Note 1 – For steady interference 10 d
+
+--- Chunk ID: 02a0f39c-6296-4fa2-80b5-e22b89660f95 ---
+Page: 49
+Type: table_reference
+Length: 1070 characters
+Embedding: [0, 0, 0, 0, 0]
+Content preview:
+– 43 – Annex 2
+TABLE 2.7
+Radio-frequency protection ratio required by FM
+sound broadcasting against interference from
+D/SECAM television transmissions 87.5 to 100 MHz
+(Steady interference)
+RF protection ratio
+Wanted signal frequency (MHz) (dB)
+relative to vision carrier
+mono stereo
+–2.0 –30 –12
+–1.0
+
+--- Chunk ID: 7904bfc0-332e-45c5-b99c-2d0dd5e59168 ---
+Page: 50
+Type: table_reference
+Length: 572 characters
+Embedding: [2, 2, 2, 2, 2]
+Content preview:
+Annex 2 – 44 –
+50
+40
+30
+20
+10
+0
+– 10
+– 20
+– 30
+– 2 – 1 0 1 2 3 4 5 6 7
+02-10
+)Bd(
+oitar
+noitcetorp
+FR
+FIGURE 2.10
+Radio-frequency protection ratio required by FM
+sound broadcasting against interference from
+D/SECAM television transmissions in the
+band 87.5 to 100 MHz (steady interference)
+Stereo
+Mon
+
+--- Chunk ID: 0db2f71e-a9ab-45c5-92a3-adc00b05a35e ---
+Page: 51
+Type: table_reference
+Length: 1708 characters
+Embedding: [8, 8, 8, 8, 8]
+Content preview:
+– 45 – Annex 2
+FIGURE 2.11
+Discrimination obtained by the use of a directional receiving
+antenna for television stations in the band 87.5 to 100 MHz
+0
+– 10
+– 20
+0 20 40 60 80 180
+02-11
+)Bd(
+noitanimircsiD
+Receiving antenna discrimination*
+Angle relative to direction of main lobe (degrees)
+* For furt
+
+--- Chunk ID: 88d19fe8-f550-42ab-b415-006c6a409f3b ---
+Page: 52
+Type: rule_or_definition
+Length: 2687 characters
+Embedding: [7, 7, 7, 7, 7]
+Content preview:
+Annex 2 – 46 –
+6.2.1 Analysis during the Conference
+The computer analysis of the Plan during the Conference was based on the methods and criteria given in
+Chapters 2 to 5 and 7, but it did not take into account any receiving antenna discrimination.
+6.2.2 Analysis during the implementation of the Pla
+
+--- Chunk ID: 2710e0c8-7356-47e6-80a5-a499de6fb8a0 ---
+Page: 53
+Type: rule_or_definition
+Length: 2315 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+– 47 – Annex 2
+7.3.2 For types A1, A2 and B2 interference the radius is 125 km.
+7.3.3 For type B1 interference the radius is 500 km.
+7.3.4 Only broadcasting stations which are in line-of-sight of the test point concerned were taken into account (see
+Chapter 2, section 2.2).
+7.4 Test points
+The calcu
+
+--- Chunk ID: d2b771b4-bce3-4e56-87ed-b06f4a2760bc ---
+Page: 54
+Type: table_reference
+Length: 1135 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+Annex 2 – 48 –
+FIGURE 2.12
+ILS localizer protection volume
+B
+m)
+m
+(31.5
+k
+17
+n
+35°
+10°
+D
+A
+C
+25 nm (46.3 km)
+9.64 nm
+(17.9 km)
+D
+B, C
+6 250 ft
+(1 905 m) 7° h*
+600 m
+A 2° 1 000 ft (305 m)
+4.8 nm
+Localizer antenna
+(8.9 km)
+Touchdown point
+The limits of the ILS back beam protection volume; in this case
+
+--- Chunk ID: cd6f637a-37ad-486b-907e-7c782feaf9f9 ---
+Page: 55
+Type: table_reference
+Length: 2292 characters
+Embedding: [2, 2, 2, 2, 2]
+Content preview:
+– 49 – Annex 2
+Where applicable, the field-strength E was converted to signal power N at the receiver input according to the
+following formula:
+E (dB(m V/m)) = N (dBm) + 118 + L + L(f)
+s
+where:
+L : system fixed loss of 3.5 dB;
+s
+L(f) : system frequency-dependent loss at frequency f of 1 dB per MHz f
+
+--- Chunk ID: 69d00b24-d179-4dc5-bdca-381d420a5014 ---
+Page: 56
+Type: table_reference
+Length: 1865 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+Annex 2 – 50 –
+7.6.3.4 During the Conference, no analysis was made for category a) due to lack of data.
+7.6.4 Type A2 interference
+The protection ratio values are given in Table 2.9.
+TABLE 2.9
+Frequency difference (kHz)
+between wanted signal and Protection ratio
+broadcasting signal (dB)
+150 –41
+200 
+
+--- Chunk ID: 4e9863dc-a9f7-4415-93ed-5aa45d63d68f ---
+Page: 57
+Type: table_reference
+Length: 1936 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 51 – Annex 2
+7.6.5.2 Three-signal case
+max (0.4;108.1 - f )
+N - 20log 1 +
+1
+0.4
+max (0.4; 108.1 - f )
+N - 20log 2 +
+2
+0.4
+max (0.4;108.1 - f )
+N - 20 log 3 + 126 > 0
+3
+0.4
+7.6.5.3 Frequency offset conditions
+Before applying the formulas given in sections 7.6.5.1 or 7.6.5.2, a correction is applied
+
+--- Chunk ID: c23a9d54-0232-4765-a279-3fd2902d54ea ---
+Page: 58
+Type: table_reference
+Length: 391 characters
+Embedding: [1, 1, 1, 1, 1]
+Content preview:
+Annex 2 – 52 –
+7.6.6 Type B2 interference
+Table 2.11 contains maximum permitted levels of broadcasting signals at the input to the airborne ILS or VOR
+receiver.
+TABLE 2.11
+Frequency of broadcasting Level
+signal (MHz) (dBm)
+107.9 –20
+106 –5
+102 5
+£ 100 10
+For intermediate values, the maximum permitte
+
+--- Chunk ID: adb4014e-5934-4b6c-91cb-ef1e27970781 ---
+Page: 59
+Type: rule_or_definition
+Length: 1706 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 53 –
+ANNEX 3
+Basic characteristics of sound broadcasting stations
+to be submitted for modifications to the Plan in application
+of Article 4 of the Agreement
+1 Assigned frequency (MHz)
+2 Country symbol
+3 Name of transmitting station
+4 Symbol of the geographical area in which the station is located 
+
+--- Chunk ID: 10486d5f-9b5e-4046-8c33-6f86136a6877 ---
+Page: 60
+Type: rule_or_definition
+Length: 2068 characters
+Embedding: [8, 8, 8, 8, 8]
+Content preview:
+– 54 –
+ANNEX 4
+Limits for determining when coordination with another
+administration is required as a result of a proposed
+modification to the Plan
+CHAPTER 1
+Limits relating to sound broadcasting
+In applying section 4.2.2 of Article 4 the following tables of distances between the broadcasting station
+
+--- Chunk ID: 94cacea9-da83-470d-b0d4-5798bb05c28f ---
+Page: 61
+Type: table_reference
+Length: 711 characters
+Embedding: [1, 1, 1, 1, 1]
+Content preview:
+– 55 – Annex 4
+Annex 4
+TABLE 4.1
+Coordination distances, D , in km, for propagation paths over land
+L
+Effective antenna height (m)
+Effective radiated
+10 37.5 75 150 300 600 1200 1800
+power
+dBW W Coordination distances (km)
+55 300k 520 520 530 540 560 600 630 670
+50 100k 460 460 470 490 510 540 580 6
+
+--- Chunk ID: a7d74e25-78ba-47ad-a4d3-d48efae7376e ---
+Page: 62
+Type: table_reference
+Length: 716 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+Annex 4 – 56 –
+TABLE 4.2
+Coordination distances, D ,in km ,for propagation paths over cold sea
+SC
+Effective antenna height (m)
+Effective radiated
+10 37.5 75 150 300 600 1200 1800
+power
+dBW W Coordination distances (km)
+55 300k 790 790 800 820 850 880 910 950
+50 100k 680 680 700 720 740 770 810 850
+4
+
+--- Chunk ID: 484615c9-fb07-48bb-93ce-69fa66d5d4c6 ---
+Page: 63
+Type: table_reference
+Length: 743 characters
+Embedding: [3, 3, 3, 3, 3]
+Content preview:
+– 57 – Annex 4
+TABLE 4.3
+Coordination distances, D , in km ,for propagation paths over warm sea
+SW
+Effective antenna height (m)
+Effective radiated
+10 37.5 75 150 300 600 1200 1800
+power
+dBW W Coordination distances (km)
+55 300k 1300 1300 1300 1300 1300 1300 1300 1300
+50 100k 1300 1300 1300 1300 1300
+
+--- Chunk ID: 1f5b36ba-430f-4d9e-a29f-805bbfc0e1f2 ---
+Page: 64
+Type: table_reference
+Length: 1938 characters
+Embedding: [8, 8, 8, 8, 8]
+Content preview:
+Annex 4 – 58 –
+TABLE 4.4
+Coordination distances, D , in km, for propagation paths
+SS
+in areas of superrefractivity
+Coordination
+Effective radiated power
+distances
+dBW W D
+SS
+(km)1)
+55 300k 1480
+50 100k 1400
+45 30k 1320
+40 10k 1230
+35 3k 1150
+30 1k 1070
+25 300 980
+20 100 900
+15 30 820
+10 10 730
+5 3 6
+
+--- Chunk ID: 1cc8461d-71d7-482e-be16-14ce3829dea0 ---
+Page: 65
+Type: table_reference
+Length: 1955 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+– 59 – Annex 4
+The corrections given in Table 4.8 take account of the fact that the protection ratio is a function of the
+frequency difference between the interfering signal and the wanted telelvision signal. To account for this effect, the
+effective radiated power, in dBW, shall be reduced by this 
+
+--- Chunk ID: 12bd5192-7c09-4caa-a7b7-312f56d7287c ---
+Page: 66
+Type: table_reference
+Length: 738 characters
+Embedding: [8, 8, 8, 8, 8]
+Content preview:
+Annex 4 – 60 –
+TABLE 4.6
+Coordination distances, D , in km, for propagation paths over cold sea
+SC
+Effective antenna height (m)
+Effective radiated
+10 37.5 75 150 300 600 1200 1800
+power
+dBW W Coordination distances (km)
+55 300k 1160 1160 1190 1220 1240 1250 1270 1300
+50 100k 990 990 1000 1040 1050 1
+
+--- Chunk ID: d1fd951a-9854-4836-9c21-333ba091465a ---
+Page: 67
+Type: table_reference
+Length: 1746 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 61 – Annex 4
+TABLE 4.7
+Coordination distances, D , in km, for propagation paths over warm sea
+SW
+Effective antenna height (m)
+Effective radiated
+10 37.5 75 150 300 600 1200 1800
+power
+dBW W Coordination distances (km)
+55 300k 1300 1300 1300 1300 1300 1300 1300 1300
+50 100k 1300 1300 1300 1300 1300
+
+--- Chunk ID: 83d5561a-9892-441f-9418-32431c1687e8 ---
+Page: 68
+Type: rule_or_definition
+Length: 2714 characters
+Embedding: [4, 4, 4, 4, 4]
+Content preview:
+Annex 4 – 62 –
+CHAPTER 3
+Limits relating to aeronautical radionavigation services
+In applying section 4.2.2 of Article 4, the aeronautical radionavigation services of another administration are
+considered as being affected if the distance from the sound broadcasting station to the nearest point on t
+
+--- Chunk ID: 422a698a-95ca-41ae-9f61-85e7920e3ee2 ---
+Page: 69
+Type: table_reference
+Length: 485 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+– 63 – Annex 4
+FIGURE 4.1
+Field strength (dB(m V/m)) for 1 kW e.r.p.
+90
+80
+70
+60
+h = 1 200 m
+50 1
+h = 600 m
+1
+h = 300 m
+40 1
+30
+h = 150 m
+20 1
+h
+1
+= 7 5 m
+h = 37.5 m
+10 1
+0
+– 10
+– 20
+– 30
+– 40
+– 50
+10 20 50 100 200 400 600 800 1 000
+04-01
+))m/V
+(mBd(
+htgnerts
+dleiF
+Logarithmic scale Linear scale
+Dis
+
+--- Chunk ID: 79b86579-a2c0-43c5-b0de-77701bdc57df ---
+Page: 70
+Type: table_reference
+Length: 441 characters
+Embedding: [1, 1, 1, 1, 1]
+Content preview:
+Annex 4 – 64 –
+FIGURE 4.2
+Field strength (dB(m V/m)) for 1 kW e.r.p.
+90
+80
+70
+60
+50 h = 1 200 m
+1
+h = 600 m
+1
+40 h = 300 m
+1
+30
+20 h
+1
+= 150 m
+h = 75 m
+1
+10
+h
+1
+= 37. 5 m
+0
+– 10
+– 20
+– 30
+– 40
+– 50
+10 20 50 100 200 400 600 800 1 000
+04-02
+))m/V
+(mBd(
+htgnerts
+dleiF
+Logarithmic scale Linear scale
+Dis
+
+--- Chunk ID: 45f7459a-a4ea-40d3-8239-d317ebf9f3c2 ---
+Page: 71
+Type: table_reference
+Length: 440 characters
+Embedding: [0, 0, 0, 0, 0]
+Content preview:
+– 65 – Annex 4
+FIGURE 4.3
+Field strength (dB(m V/m)) for 1 kW e.r.p.
+90
+80
+70
+60
+h = 1 200 m
+50 1
+h = 600 m
+1
+h = 300 m
+40 1
+30
+h = 150 m
+20 1
+h = 75 m
+1
+h = 37.5 m
+1
+10
+0
+– 10
+– 20
+– 30
+– 40
+– 50
+10 20 50 100 200 400 600 800 1 000
+04-03
+))m/V
+(mBd(
+htgnerts
+dleiF
+Logarithmic scale Linear scale
+Dist
+
+--- Chunk ID: cb2616e6-f132-41ce-8c1b-a76e7e626789 ---
+Page: 72
+Type: rule_or_definition
+Length: 634 characters
+Embedding: [4, 4, 4, 4, 4]
+Content preview:
+Annex 4 – 66 –
+CHAPTER 6
+Limits relating to the aeronautical mobile (OR) service
+In applying section 4.2.2 of Article 4, the aeronautical mobile (OR) service of the administrations listed in
+Nos. 587 and 589 of the Radio Regulations is considered as being affected if the field strength from the soun
+
+--- Chunk ID: 20cc6bec-3b3f-41dd-9704-4d798713af7f ---
+Page: 73
+Type: rule_or_definition
+Length: 2733 characters
+Embedding: [3, 3, 3, 3, 3]
+Content preview:
+– 67 –
+ANNEX 5
+Additional technical data which may be used
+for coordination between administrations
+CHAPTER 1
+Aeronautical radionavigation service
+1.1 Separation distance for compatibility
+Table 5.1 gives the minimum separation distances between a test point of the radionavigation station to be
+prot
+
+--- Chunk ID: 4bbac8de-e327-4938-8775-d65de7577b84 ---
+Page: 74
+Type: table_reference
+Length: 1357 characters
+Embedding: [7, 7, 7, 7, 7]
+Content preview:
+Annex 5 – 68 –
+TABLE 5.1
+Minimum separation distance in km between a test point of a radionavigation station
+and a sound broadcasting station required to ensure compatibility
+Annex 5
+Broadcasting station frequency (MHz)
+Effective radiated
+power of 107.7
+broadcasting £ 100 102 104 106 107 to 107.9
+st
+
+--- Chunk ID: a67c4a86-2230-42bc-bfbe-1feedfbc1e5d ---
+Page: 75
+Type: table_reference
+Length: 2109 characters
+Embedding: [9, 9, 9, 9, 9]
+Content preview:
+– 69 – Annex 5
+1.2.3 Further studies
+Studies on possible improvements are requested in Recommendation No. 4.
+CHAPTER 2
+Fixed and mobile services, except the
+aeronautical mobile (OR) service
+2.1 Sharing criteria for the protection of the land mobile service in the bands 87.5 - 100 MHz and 104 - 108 M
+
+--- Chunk ID: 03cec7a1-5eb7-4638-b8c1-bd99c96a862a ---
+Page: 76
+Type: table_reference
+Length: 2359 characters
+Embedding: [9, 9, 9, 9, 9]
+Content preview:
+Annex 5 – 70 –
+CHAPTER 3
+Aeronautical mobile (OR) service
+When the frequencies of the broadcasting and the aeronautical mobile stations are both known, the field
+strengths given in Table 5.4 below may be used as sharing criteria.
+TABLE 5.4
+Frequency separation in kHz
+between broadcasting station Fie
+
+--- Chunk ID: 9d7b3be7-9ad0-40cf-b8b0-3e9308d58712 ---
+Page: 77
+Type: table_reference
+Length: 368 characters
+Embedding: [8, 8, 8, 8, 8]
+Content preview:
+– 71 – Annex 5
+FIGURE 5.1
+Rapport (dB) entre le champ pour un pourcentage
+quelconque des emplacements de réception et le champ
+pour 50% des emplacements de réception
+20
+15
+10
+5
+0
+– 5
+– 10
+– 15
+– 20
+1 2 5 10 20 40 60 80 90 95 98 99
+30 50 70
+05-01
+)Bd(
+troppaR
+Pourcentage des emplacements de réception
+
+--- Chunk ID: df243207-8217-4939-afcf-f3b1fffb7ebe ---
+Page: 78
+Type: table_reference
+Length: 317 characters
+Embedding: [7, 7, 7, 7, 7]
+Content preview:
+Annex 5 – 72 –
+FIGURE 5.2
+Terrain clearance angle
+q
+16 km
+q
+05-02
+m
+01
+m
+01
+q negative
+q positive
+FIGURE 5.3
+Receiving terrain clearance angle correction (VHF)
+20
+10
+0
+– 10
+– 20
+– 30
+– 5 – 4 – 3 – 2 – 1 0 0.5
+Clearance angle (degrees)
+05-03
+)Bd(
+noitcerroC
+________________
+
+{{ TABLE_PAGE_78_1 }}
+
+{{
+
+--- Chunk ID: 6a983e07-9bc8-44b5-adac-bf2ee6b31827 ---
+Page: 79
+Type: rule_or_definition
+Length: 2536 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 73 – FP – 1
+FP – 1
+FINAL PROTOCOL1
+At the time of signing of the Final Acts of the Regional Administrative Conference for the Planning of VHF Sound
+Broadcasting (Region 1 and Part of Region 3) (Geneva, 1984), the undersigned delegates take note of the following statements made
+by signatory delegat
+
+--- Chunk ID: 0b66233d-7d9a-4be5-aa82-debec8bcc4ff ---
+Page: 80
+Type: rule_or_definition
+Length: 3061 characters
+Embedding: [1, 1, 1, 1, 1]
+Content preview:
+FP – 1 – 74 –
+No. 4
+(Original: English)
+For the Socialist People’s Libyan Arab Jamahiriya:
+In signing the Final Acts of this Conference, the Libyan Delegation does not recognize the authority of the Delegation of
+the Republic of Chad to enter in the Plan any assignment to stations having the followi
+
+--- Chunk ID: 94021b90-5668-47b1-923c-5a1e8879596f ---
+Page: 81
+Type: rule_or_definition
+Length: 2934 characters
+Embedding: [4, 4, 4, 4, 4]
+Content preview:
+– 75 – FP – 1
+No. 9
+(Original: English)
+For the Union of Soviet Socialist Republics:
+Considering that according to the Radio Regulations the band 87.5 - 100 MHz in the USSR is used and will be used in the
+future for television broadcasting over the entire territory of the country, and noting that th
+
+--- Chunk ID: 1b8f423d-6e98-4286-9705-c9e88a2ec8ca ---
+Page: 82
+Type: rule_or_definition
+Length: 3367 characters
+Embedding: [7, 7, 7, 7, 7]
+Content preview:
+FP – 1 – 76 –
+No. 14
+(Original: English)
+For the Kingdom of Swaziland:
+The Delegation of the Kingdom of Swaziland reserves the right of its Government to take such action as it may consider
+necessary to protect its interests should any Member fail to observe the provision laid down in the Regional A
+
+--- Chunk ID: 591fa850-0a6d-4b1c-af33-254a46811a8b ---
+Page: 83
+Type: rule_or_definition
+Length: 3388 characters
+Embedding: [8, 8, 8, 8, 8]
+Content preview:
+– 77 – FP – 1
+No. 18
+(Original: French)
+For the People’s Republic of Benin:
+The Government of the People’s Republic of Benin will do all in its power to protect its frequency assignments as included
+in the Plan adopted by the Regional Administrative Conference for the Planning of Sound Broadcasting 
+
+--- Chunk ID: 2a232c8f-4fa5-4619-8334-c54c82319a95 ---
+Page: 84
+Type: rule_or_definition
+Length: 3061 characters
+Embedding: [1, 1, 1, 1, 1]
+Content preview:
+FP – 1 – 78 –
+No. 22
+(Original: French)
+For the People’s Democratic Republic of Algeria:
+The Algerian Delegation declares that the notices concerning the sound broadcasting stations in the Western Sahara
+submitted by the Kingdom of Morocco are null and void with respect to international law and to a
+
+--- Chunk ID: b48128c4-f6f8-4da0-8278-8746b6c576f0 ---
+Page: 85
+Type: rule_or_definition
+Length: 3186 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 79 – FP – 1
+No. 26
+(Original: English)
+For Islamic Republic of Iran:
+In signing the Final Acts of the Regional Administrative Conference for the Planning of VHF Sound Broadcasting
+(Geneva, 1984), the Delegation of the Islamic Republic of Iran declares that:
+since the Agreement and its associated P
+
+--- Chunk ID: 6dfd209a-44ce-4604-baac-c625f4334487 ---
+Page: 86
+Type: rule_or_definition
+Length: 3835 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+FP – 1 – 80 –
+In addition, coordination with other government authorities responsible for the sound broadcasting frequencies used in the
+Western Sectors of Berlin and the submission to the International Frequency Registration Board of notices for the registration of
+frequencies have no bearing on ma
+
+--- Chunk ID: bf4917be-9195-49a6-9f49-85af432c66fd ---
+Page: 87
+Type: rule_or_definition
+Length: 3742 characters
+Embedding: [2, 2, 2, 2, 2]
+Content preview:
+– 81 – FP – 1
+2. The provisions stipulated in the Radio Regulations shall be applied for coordination of television stations of the
+USSR in the band 87.5 - 100 MHz situated outside the Stockholm Plan which are notified to and recorded by the
+IFRB before 31 December 1983 (the date set by the first se
+
+--- Chunk ID: cc9add82-b010-4ef2-8d54-f2de2ec23178 ---
+Page: 88
+Type: rule_or_definition
+Length: 1976 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+FP – 1 – 82 –
+No. 38
+(Original: English)
+For the Socialist Federal Republic of Yugoslavia:
+1. The Delegation of the Socialist Federal Republic of Yugoslavia declares with regard to the declaration No. 23 of the
+Delegation of the Socialist People’s Republic of Albania that the frequency assignments:
+
+
+--- Chunk ID: 1399bef6-0dfd-4c3c-9550-bd703c896949 ---
+Page: 89
+Type: rule_or_definition
+Length: 2429 characters
+Embedding: [9, 9, 9, 9, 9]
+Content preview:
+– 83 – RES-1
+RES-1
+RESOLUTION No. 1
+Modifications to the Plan
+Before the Entry into Force of the Agreement
+The Regional Administrative Conference for the Planning of VHF Sound Broadcasting (Region 1 and Part of
+Region 3) (Geneva, 1984),
+considering
+a) that, in accordance with its agenda, it has adop
+
+--- Chunk ID: e0d2418d-6808-49d8-a793-7d65dff5bf6b ---
+Page: 90
+Type: rule_or_definition
+Length: 2766 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+RES-1 – 84 –
+considering
+a) that the planning of sound broadcasting stations was made without taking account of existing and planned
+stations of the permitted services, to which the band 87.5 - 88 MHz is also allocated;
+b) that the bringing into use of broadcasting stations may cause interference to
+
+--- Chunk ID: 6c866ce9-a608-4619-8880-4f5b10940afe ---
+Page: 91
+Type: rule_or_definition
+Length: 3245 characters
+Embedding: [5, 5, 5, 5, 5]
+Content preview:
+– 85 – RES-1
+resolves
+1. that the VHF Sound Broadcasting Plan (Geneva, 1984), shall be implemented in the frequency band 104 -
+108 MHz in such a way as to permit the normal operation of the existing fixed and mobile services in this band on the
+conditions specified in the Radio Regulations;
+2. that 
+
+--- Chunk ID: e313ce2c-64c9-432b-8637-4e7a89a6c790 ---
+Page: 92
+Type: rule_or_definition
+Length: 3306 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+RES-1 – 86 –
+2. that, on receipt of this information, the IFRB shall send a copy thereof to the administration of the Contracting
+Member concerned, in order to permit it to take the appropriate steps in consultation with the administration of the non-
+Contracting Member concerned for the resolution 
+
+--- Chunk ID: 57968adf-079a-4195-9c1a-2fa8001ec02f ---
+Page: 93
+Type: rule_or_definition
+Length: 3356 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 87 – RES-1
+recognizing
+a) that the parts of the two earlier Agreements and their annexed Plans mentioned in considering e) shall, from
+the date of entry into force of the new Regional Agreement and assoicated Plan (1 July 1987), be considered in
+accordance with Article 3 of the Agreement as having
+
+--- Chunk ID: b8d445bb-5b8b-4b00-88b9-475d8edd5a0b ---
+Page: 94
+Type: rule_or_definition
+Length: 2041 characters
+Embedding: [1, 1, 1, 1, 1]
+Content preview:
+RES-1 – 88 –
+c) to submit to the Administrative Council, at its 40th session, a report on the matter, if these proposals fail to be
+accepted, as provided by Article 62 of the Nairobi Convention;
+requests the Administrative Council
+to consider this report with a view to taking any appropriate action.
+
+--- Chunk ID: edcc2fbd-a74d-43bc-b68c-850ef6dda539 ---
+Page: 95
+Type: rule_or_definition
+Length: 2157 characters
+Embedding: [7, 7, 7, 7, 7]
+Content preview:
+– 89 – REC-1
+REC-1
+RECOMMENDATION No. 1
+Approval or Accession to the Agreement
+by Members in the Planning Area
+The Regional Administrative Conference for the Planning of VHF Sound Broadcasting (Region 1 and Part of
+Region 3) (Geneva, 1984),
+considering
+a) that, in accordance with its agenda, it has 
+
+--- Chunk ID: 90a46f5b-b301-4e83-97d1-8fdbedd3610d ---
+Page: 96
+Type: rule_or_definition
+Length: 2480 characters
+Embedding: [0, 0, 0, 0, 0]
+Content preview:
+REC-1 – 90 –
+recommends
+administrations seeking agreement to the early implementation of assignments in the Plan to follow the
+optional procedure set out in the Annex to this Recommendation.
+ANNEX TO RECOMMENDATION No. 2
+Procedure for Early Implementation of
+Assignments in the Plan
+1. Administration
+
+--- Chunk ID: 15104d74-90a8-4bc1-86ab-f3894090f488 ---
+Page: 97
+Type: rule_or_definition
+Length: 3094 characters
+Embedding: [4, 4, 4, 4, 4]
+Content preview:
+– 91 – REC-1
+recommends
+that the administrations concerned agree to the mutual and reciprocal coordination of the concerned frequency
+assignments of sound broadcasting stations in the Plan and the television stations, irrespective of the status of their
+stations, whether operational or planned; this
+
+--- Chunk ID: 636b2b0c-6090-42a0-8382-294fcd15d82c ---
+Page: 98
+Type: rule_or_definition
+Length: 2073 characters
+Embedding: [3, 3, 3, 3, 3]
+Content preview:
+REC-1 – 92 –
+requests the ICAO
+to continue to study these problems and communicate the results of its studies to the CCIR;
+instructs the Secretary-General
+to communicate this Recommendation to the ICAO;
+recommends administrations
+to participate actively in these studies and provide the CCIR with exp
+
+--- Chunk ID: 0651767b-4e01-45f8-a6c4-c9c8c17af927 ---
+Page: 99
+Type: rule_or_definition
+Length: 2196 characters
+Embedding: [6, 6, 6, 6, 6]
+Content preview:
+– 93 – REC-1
+RECOMMENDATION No. 6
+Use of the Band 108 - 117.975 MHz
+by the Aeronautical Radionavigation Service
+The Regional Administrative Conference for the Planning of VHF Sound Broadcasting (Region 1 and Part of
+Region 3) (Geneva, 1984),
+considering
+a) that in accordance with its mandate contain
+
+--- Chunk ID: 3e712afb-690f-47b7-9e55-cedb4ed90405 ---
+Page: 100
+Type: rule_or_definition
+Length: 1799 characters
+Embedding: [9, 9, 9, 9, 9]
+Content preview:
+REC-1 – 94 –
+RECOMMENDATION No. 7
+Proposal for the Modification
+of Appendix 8 to the Radio Regulations
+Maximum Permitted Spurious Emission Power Levels
+Radiated in the Band 108 - 137 MHz by Sound Broadcasting Stations
+Operating in the Band 87.5 - 108 MHz
+The Regional Administrative Conference for th
+

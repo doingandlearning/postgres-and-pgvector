@@ -44,6 +44,7 @@ def page_has_diagram(page, threshold=20, area_ratio=0.05):
     else:
         return False
 
+
 # ---------- RENDER PAGE IMAGE ----------
 
 def render_page_as_image(page, page_num, output_dir="extracted_pages"):
