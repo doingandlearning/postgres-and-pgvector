@@ -17,7 +17,7 @@ def get_db_connection():
 def get_embedding(text: str, model: str = "all-minilm") -> list[float]:
     """
     Generates an embedding for the given text using a local Ollama model.
-    The default model is 'all-minilm' which has 384 dimensions.
+    The default model is 'bge-m3' which has 1024 dimensions.
     """
     try:
         response = requests.post(OLLAMA_URL, json={"model": "bge-m3", "input": text})
