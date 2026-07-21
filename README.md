@@ -1,12 +1,12 @@
 # Building AI-Powered Search with PostgreSQL and Large Language Models
 
-- **Dates**: 30th June & 1st July, 2025 (2 Days)
+- **Dates**: 27th & 28th July, 2026 (2 Days)
 - **Instructor**: Kevin Cunningham
   - [Email](mailto:kevin@kevincunningham.co.uk)
   - [Website](https://kevincunningham.co.uk)
 - **Repo**: [Link to this repository](https://github.com/doingandlearning/postgres-and-pgvector)
 - **Miro Board**: [Link to course Miro board]()
-- **Feedback Form**: [Link to feedback form]()
+- **Feedback Form**: [Link to feedback form](https://forms.office.com/e/CV0xcxUshD)
 
 ---
 

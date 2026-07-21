@@ -107,19 +107,19 @@ The server will run on `http://localhost:5100`
 
 ### Health check:
 ```bash
-curl http://localhost:5000/health
+curl http://localhost:5100/health
 ```
 
 ### Query with LLM:
 ```bash
-curl -X POST http://localhost:5000/query \
+curl -X POST http://localhost:5100/query \
   -H "Content-Type: application/json" \
   -d '{"query": "What are the frequency allocations?"}'
 ```
 
 ### Search chunks only:
 ```bash
-curl -X POST http://localhost:5000/search \
+curl -X POST http://localhost:5100/search \
   -H "Content-Type: application/json" \
   -d '{"query": "frequency allocation", "top_k": 3}'
 ```
