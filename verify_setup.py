@@ -22,7 +22,7 @@ OLLAMA_MODEL = "bge-m3"
 def check_python_version():
     """Checks if the Python version is 3.13 or lower."""
     print("--- 1. Checking Python Version ---")
-    is_ok = sys.version_info < (3, 14)
+    is_ok = sys.version_info < (3, 15)
     if is_ok:
         print(f"✅ Success: Your Python version is {sys.version.split()[0]}, which is compatible.")
     else:
