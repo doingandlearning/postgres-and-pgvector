@@ -423,9 +423,8 @@ def enhance_with_openai(tickets, user_issue):
 ✅ Filters results by **status, priority, and tags**.  
 ✅ Enhances responses with an **LLM-powered solution generator**.  
 
-📌 **Next Steps:**  
-1️⃣ **Should we add UI elements to make this interactive?**  
-2️⃣ **Would caching LLM results improve performance?**  
-3️⃣ **How can we handle multi-step conversations for long-running issues?**  
-
-Let me know where you’d like to refine this! 🚀
+## **📌 Extension Ideas**
+If you finish early, try extending the system:
+1️⃣ Add UI elements to make this interactive.  
+2️⃣ Cache LLM results to improve performance.  
+3️⃣ Handle multi-step conversations for long-running issues.

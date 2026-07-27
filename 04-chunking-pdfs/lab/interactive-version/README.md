@@ -6,7 +6,7 @@ This lab focuses on understanding **vector concepts and chunking strategies** wi
 ## The Question
 What is Alice's sister's name?
 
-*Hint: The answer is in the first paragraph of the book.*
+*Hint: The first paragraph of the book is the most relevant passage — but read it closely, as it doesn't actually name the sister. That's the point of this exercise (see "Expected Results" below).*
 
 ## Approach Options
 

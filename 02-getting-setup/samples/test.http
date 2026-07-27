@@ -1,10 +1,10 @@
 ### Verify that the model is working
-POST http://localhost:11434/api/embed 
+POST http://localhost:11434/api/embed
 Content-Type: application/json
 
 {
-	"model": "bge-m3",
-	"input": "Hello world"
+    "model": "bge-m3",
+    "input": "Hello world"
 }
 
 ### Verify the model is working with a different model
@@ -16,3 +16,4 @@ Authorization: Bearer
     "model": "text-embedding-3-small",
     "input": "Hello world"
 }
+# response["data"][0]["embedding"]

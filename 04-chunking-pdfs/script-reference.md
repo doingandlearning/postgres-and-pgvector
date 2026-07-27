@@ -4,10 +4,12 @@ This module demonstrates a progressive approach to PDF document processing, star
 
 ## Script Progression Overview
 
+0. **00-init-db.py** - Creates the `docs` table (and enables `pgvector`) if it doesn't already exist — run this first
 1. **01-simple-chunker.py** - Basic text extraction and fixed-size chunking
 2. **02-store-chunks.py** - Adding database storage and embeddings
 3. **03-batch-embed.py** - Optimizing for performance with batch processing
 4. **04-complex-pdf-chunker.py** - Advanced structure-aware chunking
+5. **06-semantic-chunker.py** - Meaning-aware chunking using NLP and embedding comparison
 
 ---
 
@@ -198,6 +200,45 @@ def classify_chunk(text):
 
 ---
 
+## Script 5: Meaning-Aware Chunking (`06-semantic-chunker.py`)
+
+### Purpose
+Where Script 4 splits on *structural* signals (headings, legal clause markers, tables), this script splits on *semantic* ones — it compares what consecutive sentences actually mean, using the same embedding model students already use for search, rather than relying on document formatting.
+
+### Key Concepts
+
+**Sentence-Level Embeddings**: Uses `nltk`'s sentence tokenizer to split text into sentences, then embeds each sentence individually via `get_embedding` (the same Ollama helper used throughout the course):
+```python
+for sentence in sent_tokenize(text):
+    ...
+```
+
+**Comparing Meaning, Not Just Position**: Each new sentence's embedding is compared to the previous sentence's embedding with cosine similarity. A significant drop signals a topic shift:
+```python
+similarity = cosine_similarity(prev_embedding, embedding)
+topic_shifted = similarity < similarity_threshold
+```
+
+**No New Dependencies**: `cosine_similarity` is implemented in plain Python (dot product over vector norms) so this sample doesn't need numpy or scikit-learn — everything here already exists in `requirements.txt`.
+
+**Safety Valve**: A `max_chunk_sentences` cap prevents a long, thematically consistent passage from growing into one unwieldy chunk.
+
+### Why This Matters
+- **Chunk Boundaries That Mean Something**: Chunks end where the topic actually changes, not at an arbitrary word count.
+- **Reuses What Students Already Know**: No new embedding model or library — it's the same `get_embedding` call from earlier scripts, applied sentence-by-sentence instead of chunk-by-chunk.
+- **Bridges Theory and Practice**: This is a hands-on version of the "semantic boundaries" idea introduced in `taking-it-further.md` (which covers TextTiling) — same concept, built from tools already in the course.
+
+### Limitations
+- One embedding call per *sentence* is a lot of round-trips for a large document — fine for a live demo (the script caps `max_sentences`), but worth batching/caching for production use.
+- Comparing only to the immediately preceding sentence is simple and demo-friendly; a more robust version could compare against a rolling average embedding of the current chunk instead of just the last sentence.
+
+### Real-World Applications
+- **Meeting transcripts / interviews**: topic changes rarely line up with headings.
+- **Long-form articles or blog posts**: prose with no structural markers to split on.
+- **Any document where structure-aware chunking (Script 4) isn't available**, e.g. plain text with no headings, tables, or clause markers.
+
+---
+
 ## Choosing the Right Approach
 
 | Document Type | Recommended Script | Reasoning |
@@ -206,6 +247,7 @@ def classify_chunk(text):
 | Large document collections | Script 3 | Performance matters |
 | Legal/technical documents | Script 4 | Structure preservation critical |
 | Documents with tables/diagrams | Script 4 | Multimedia content handling |
+| Unstructured prose (no headings/clauses) | Script 5 | Meaning-based boundaries substitute for missing structure |
 
 ## Key Takeaways
 

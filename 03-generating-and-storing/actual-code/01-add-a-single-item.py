@@ -1,7 +1,6 @@
 import requests
 import psycopg
 import json
-# pip install -r requirements.txt
 
 DB_CONFIG = {
   "dbname": "pgvector",
@@ -10,8 +9,6 @@ DB_CONFIG = {
   "host": "localhost",
   "port": "5050"
 }
-
-
 
 def get_embedding(text):
   data = {

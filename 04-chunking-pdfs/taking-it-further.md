@@ -97,6 +97,12 @@ Limitations:
 - Works best on plain text
 - Not perfect for scanned PDFs or documents with heavy layout
 
+### A Working Example, No New Libraries Required
+
+TextTiling is one way to detect topic shifts, but you can get a similar effect using tools you already have in this course: sentence tokenization (`nltk`) plus the embedding model you're already calling for search.
+
+See **`samples/06-semantic-chunker.py`** for a full working version — it splits a PDF into sentences, embeds each one, and starts a new chunk whenever the cosine similarity between consecutive sentences drops (a topic shift), rather than cutting at a fixed word count or heading. Useful for prose that has no clear structural markers to split on.
+
 ---
 
 ## Multiprocessing for Faster Embeddings

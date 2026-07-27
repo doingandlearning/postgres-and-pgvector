@@ -80,6 +80,8 @@ CREATE TABLE
   );
 ```
 
+Run `samples/00-init-db.py` before the rest of the module's scripts — it creates this table (and enables the `vector` extension) if they don't already exist, so `02-store-chunks.py` onward have somewhere to write to.
+
 ### 5. Batch embedding script
 
 To process large documents efficiently, embed chunks in batches. This reduces the number of database round-trips. A simple script could loop through chunks, accumulate a batch (e.g., 100 chunks), and commit to the database every 1,000 rows.
