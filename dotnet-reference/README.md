@@ -37,10 +37,4 @@ dotnet run "artificial intelligence and machine learning"
 It'll print the top 5 closest `items` rows by cosine distance, same as
 the SQL queries you've already run by hand in Module 05.
 
-## A note on testing
 
-This was written and carefully checked against the documented APIs of
-`Npgsql` and `Pgvector.Npgsql`, but it hasn't been compiled -- there's no
-.NET SDK available in the environment this was written in. Please run
-`dotnet build` once before showing it live, in case a package version or
-API detail needs a small adjustment.

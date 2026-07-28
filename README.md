@@ -4,6 +4,7 @@
   - [Email](mailto:kevin@kevincunningham.co.uk)
   - [Website](https://kevincunningham.co.uk)
 - **Repo**: [Link to this repository](https://github.com/doingandlearning/postgres-and-pgvector)
+- [Feedback link](https://forms.cloud.microsoft/e/BQPZN6fCiD)
 
 
 ---
