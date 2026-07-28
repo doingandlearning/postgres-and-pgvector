@@ -31,7 +31,7 @@ SET item_data = jsonb_set(
 -- Look at what you've got before you run the rest -- this also doubles as
 -- a quick reminder of the subject/price spread in the data.
 
-SELECT name, item_data->>'subject' AS subject, item_data->>'price' AS price
+SELECT name, item_data->>'subject' AS subject, item_data->>'price' AS price, item_data->>'first_publish_year' as year
 FROM items
 ORDER BY item_data->>'subject', (item_data->>'price')::numeric;
 
@@ -53,6 +53,7 @@ SELECT
     i.name,
     i.item_data->>'subject' AS subject,
     i.item_data->>'price' AS price,
+    i.item_data->>'first_publish_year' AS year,
     ROUND((i.embedding <=> r.embedding)::numeric, 4) AS distance
 FROM items i, reference_item r
 ORDER BY distance ASC
@@ -105,7 +106,7 @@ SELECT
     i.item_data->>'price' AS price,
     ROUND((i.embedding <=> r.embedding)::numeric, 4) AS distance
 FROM items i, reference_item r
-WHERE (i.item_data->>'price')::numeric <= r.price * 1.5   -- <-- within 50% of the reference price
+WHERE (i.item_data->>'price')::numeric <= r.price * 1.5 -- <-- within 50% of the reference price
 ORDER BY distance ASC
 LIMIT 5;
 
@@ -131,12 +132,12 @@ SELECT
     ROUND((i.embedding <=> r.embedding)::numeric, 4) AS raw_distance,
     ROUND(
         (i.embedding <=> r.embedding)::numeric *
-        CASE WHEN i.item_data->>'subject' = r.subject THEN 0.8 ELSE 1.0 END,
+        CASE WHEN i.item_data->>'subject' = r.subject THEN 0.8 ELSE 1.0 END *
+        CASE WHEN (i.item_data->>'first_publish_year')::int < 2000 THEN 1 ELSE 0.8 END,
     4) AS adjusted_score
 FROM items i, reference_item r
 ORDER BY adjusted_score ASC
-LIMIT 5;
-
+LIMIT 15;
 -- ============================================================================
 -- Debrief prompt for the room
 -- ============================================================================

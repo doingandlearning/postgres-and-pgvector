@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Ticket Search</title>
+<style>
+  :root {
+    --ink: #1c2530;
+    --ink-soft: #55636f;
+    --paper: #ffffff;
+    --bg: #f2f4f7;
+    --line: #dde2e8;
+    --brand: #2f5fda;
+    --brand-dark: #23439e;
+    --high: #1f8a4c;
+    --high-bg: #e6f6ec;
+    --medium: #a3690a;
+    --medium-bg: #fbf0dc;
+    --low: #b23b3b;
+    --low-bg: #fbe9e9;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  header {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 28px 24px 22px;
+  }
+
+  header .inner, main {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    margin: 0 0 4px;
+  }
+
+  header p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  #server-status {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  #server-status .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #b7bec6;
+    flex-shrink: 0;
+  }
+
+  #server-status.ok .dot { background: var(--high); }
+  #server-status.down .dot { background: var(--low); }
+
+  main {
+    padding: 24px;
+  }
+
+  .search-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 64px;
+  }
+
+  textarea:focus, select:focus, button:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 1px;
+  }
+
+  .examples {
+    margin-top: 12px;
+  }
+
+  .examples span {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-right: 8px;
+  }
+
+  .example-chip {
+    display: inline-block;
+    margin: 4px 6px 0 0;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    background: #f8f9fb;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: var(--ink);
+  }
+
+  .example-chip:hover {
+    border-color: var(--brand);
+    color: var(--brand-dark);
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 16px;
+    align-items: end;
+  }
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .filter-group label { font-size: 0.8rem; margin-bottom: 0; }
+
+  select {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1.5px solid var(--line);
+    font-size: 0.9rem;
+    background: white;
+  }
+
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+  }
+
+  .checkbox-row label { font-weight: 400; margin: 0; }
+
+  .search-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+
+  button.primary {
+    background: var(--brand);
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  button.primary:hover { background: var(--brand-dark); }
+
+  button.primary:disabled {
+    background: #a9b6d6;
+    cursor: not-allowed;
+  }
+
+  #status-line {
+    min-height: 24px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--line);
+    border-top-color: var(--brand);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .banner {
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+  }
+
+  .banner.error {
+    background: var(--low-bg);
+    color: #7a2727;
+    border: 1px solid #eec7c7;
+  }
+
+  .banner.empty {
+    background: #f2f4f7;
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+  }
+
+  .result-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin-bottom: 14px;
+  }
+
+  .result-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .result-head h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+  }
+
+  .result-meta {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+
+  .confidence-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: help;
+  }
+
+  .confidence-badge.high { background: var(--high-bg); color: var(--high); }
+  .confidence-badge.medium { background: var(--medium-bg); color: var(--medium); }
+  .confidence-badge.low { background: var(--low-bg); color: var(--low); }
+
+  .issue-text {
+    margin: 12px 0;
+    font-size: 0.95rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .tag {
+    background: #eef1f6;
+    color: var(--ink-soft);
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 5px;
+  }
+
+  details {
+    margin-top: 8px;
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+  }
+
+  summary {
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--brand-dark);
+  }
+
+  .detail-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+
+  .detail-grid dt {
+    color: var(--ink-soft);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .detail-grid dd { margin: 2px 0 0; }
+
+  .resolution-steps {
+    margin: 10px 0 0;
+    padding-left: 18px;
+    font-size: 0.88rem;
+  }
+
+  .resolution-steps li { margin-bottom: 4px; }
+
+  .ai-summary {
+    background: #eef2ff;
+    border: 1px solid #ccd7f7;
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+
+  .ai-summary-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--brand-dark);
+    margin-bottom: 8px;
+  }
+
+  .ai-summary p {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+  }
+
+  .ai-summary-sources {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  .ai-summary-unavailable {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    background: #f8f9fb;
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    margin-bottom: 16px;
+  }
+
+  .weak-toggle {
+    background: none;
+    border: 1px dashed var(--line);
+    color: var(--ink-soft);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  @media (max-width: 560px) {
+    .result-head { flex-direction: column; }
+    .search-row { justify-content: stretch; }
+    button.primary { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>Support Ticket Search</h1>
+    <p>Finds resolved tickets and knowledge-base fixes for a new issue using vector similarity — built on the Module 09 capstone data.</p>
+    <div id="server-status">
+      <span class="dot"></span>
+      <span id="server-status-text">Checking connection to the search backend…</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="search-card">
+    <label for="query">Describe the issue</label>
+    <textarea id="query" placeholder="e.g. customers say they never got their order confirmation email" aria-describedby="query-hint"></textarea>
+    <div id="query-hint" class="sr-only">Press Enter to search, or Shift+Enter for a new line.</div>
+
+    <div class="examples">
+      <span>Try one:</span>
+      <button type="button" class="example-chip">Users can't log in, screen goes blank after entering password</button>
+      <button type="button" class="example-chip">Third-party API calls are failing with rate limit errors</button>
+      <button type="button" class="example-chip">Customers aren't getting their order confirmation emails</button>
+      <button type="button" class="example-chip">Mobile app crashes when uploading a large photo</button>
+      <button type="button" class="example-chip">Dashboard is really slow during busy periods</button>
+      <button type="button" class="example-chip">Possible vulnerability in the login system</button>
+      <button type="button" class="example-chip">We were billed the wrong amount for our subscription</button>
+    </div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label for="priority">Priority</label>
+        <select id="priority">
+          <option value="">Any</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+          <option value="critical">Critical</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="">Any</option>
+          <option value="Authentication">Authentication</option>
+          <option value="API">API</option>
+          <option value="Email">Email</option>
+          <option value="Mobile">Mobile</option>
+          <option value="Performance">Performance</option>
+          <option value="Payments">Payments</option>
+        </select>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="resolvedOnly" checked>
+        <label for="resolvedOnly">Only tickets with a known solution</label>
+      </div>
+    </div>
+
+    <div class="search-row">
+      <button type="button" class="primary" id="searchBtn">Search tickets</button>
+    </div>
+  </div>
+
+  <div id="status-line" role="status" aria-live="polite"></div>
+  <div id="results"></div>
+</main>
+
+<script>
+  // Served by the same Flask process that exposes /api/*, so requests
+  // are same-origin -- no base URL needed.
+  const API_BASE = '';
+
+  const queryEl = document.getElementById('query');
+  const searchBtn = document.getElementById('searchBtn');
+  const priorityEl = document.getElementById('priority');
+  const categoryEl = document.getElementById('category');
+  const resolvedOnlyEl = document.getElementById('resolvedOnly');
+  const statusLine = document.getElementById('status-line');
+  const resultsEl = document.getElementById('results');
+  const serverStatusEl = document.getElementById('server-status');
+  const serverStatusText = document.getElementById('server-status-text');
+
+  let statusTimers = [];
+
+  document.querySelectorAll('.example-chip').forEach((chip) => {
+    chip.addEventListener('click', () => {
+      queryEl.value = chip.textContent;
+      queryEl.focus();
+      runSearch();
+    });
+  });
+
+  queryEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      runSearch();
+    }
+  });
+
+  searchBtn.addEventListener('click', runSearch);
+
+  async function checkHealth() {
+    try {
+      const res = await fetch(`${API_BASE}/api/health`);
+      if (!res.ok) throw new Error();
+      serverStatusEl.classList.add('ok');
+      serverStatusText.textContent = 'Connected to search backend.';
+    } catch {
+      serverStatusEl.classList.add('down');
+      serverStatusText.textContent =
+        'Can’t reach the search API — make sure app.py is running (it serves this page too).';
+    }
+  }
+
+  function clearStatusTimers() {
+    statusTimers.forEach(clearTimeout);
+    statusTimers = [];
+  }
+
+  function setStatus(html) {
+    statusLine.innerHTML = html;
+  }
+
+  function spinnerStatus(text) {
+    return `<span class="spinner" aria-hidden="true"></span><span>${text}</span>`;
+  }
+
+  async function runSearch() {
+    const query = queryEl.value.trim();
+    if (!query) {
+      setStatus('<span>Type a description of the issue first.</span>');
+      queryEl.focus();
+      return;
+    }
+
+    searchBtn.disabled = true;
+    resultsEl.innerHTML = '';
+    clearStatusTimers();
+
+    // Latency is the honest cost of two sequential steps -- embedding
+    // the query, then searching. Naming both stages (rather than a bare
+    // spinner) sets expectations instead of leaving the user guessing.
+    setStatus(spinnerStatus('Turning your query into an embedding…'));
+    statusTimers.push(
+      setTimeout(() => setStatus(spinnerStatus('Searching resolved tickets for a match…')), 900)
+    );
+    statusTimers.push(
+      setTimeout(() => setStatus(spinnerStatus('Drafting a suggested response…')), 1800)
+    );
+
+    const payload = {
+      query,
+      priority: priorityEl.value || null,
+      category: categoryEl.value || null,
+      resolved_only: resolvedOnlyEl.checked,
+      limit: 5,
+    };
+
+    try {
+      const res = await fetch(`${API_BASE}/api/search`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      clearStatusTimers();
+
+      if (!res.ok) {
+        setStatus('');
+        showError(data.error || 'Something went wrong searching tickets.');
+        return;
+      }
+
+      setStatus('');
+      renderResults(data);
+    } catch (err) {
+      clearStatusTimers();
+      setStatus('');
+      showError(
+        'Couldn’t reach the search backend. Make sure app.py is running on port 5200.'
+      );
+    } finally {
+      searchBtn.disabled = false;
+    }
+  }
+
+  function showError(message) {
+    resultsEl.innerHTML = `<div class="banner error">${escapeHtml(message)}</div>`;
+  }
+
+  function renderAiSummary(data) {
+    if (data.ai_summary) {
+      const sources = data.results.map((r) => r.ticket_number).join(', ');
+      return `
+        <div class="ai-summary">
+          <div class="ai-summary-label">Suggested response — AI-drafted from the tickets below</div>
+          <p>${escapeHtml(data.ai_summary)}</p>
+          <div class="ai-summary-sources">Based on: ${escapeHtml(sources)}. Verify against the original tickets before sending to a customer.</div>
+        </div>
+      `;
+    }
+    if (data.ai_summary_note) {
+      return `<div class="ai-summary-unavailable">${escapeHtml(data.ai_summary_note)}</div>`;
+    }
+    return '';
+  }
+
+  function renderResults(data) {
+    if (data.has_confident_match && data.results.length) {
+      resultsEl.innerHTML = renderAiSummary(data) + data.results.map(renderCard).join('');
+      return;
+    }
+
+    // Honest empty state: don't force a "best available" result to look
+    // like a real answer when nothing cleared the confidence bar.
+    let html = `<div class="banner empty">No resolved ticket confidently matches this issue. This might be a new problem — consider filing a fresh ticket rather than trusting a weak match.</div>`;
+
+    if (data.weak_results && data.weak_results.length) {
+      html += `<button type="button" class="weak-toggle" id="weakToggle">Show closest (low-confidence) matches anyway</button>
+               <div id="weakList" style="display:none; margin-top: 12px;">
+                 ${data.weak_results.map(renderCard).join('')}
+               </div>`;
+    }
+
+    resultsEl.innerHTML = html;
+
+    const toggle = document.getElementById('weakToggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const list = document.getElementById('weakList');
+        const showing = list.style.display !== 'none';
+        list.style.display = showing ? 'none' : 'block';
+        toggle.textContent = showing
+          ? 'Show closest (low-confidence) matches anyway'
+          : 'Hide low-confidence matches';
+      });
+    }
+  }
+
+  function renderCard(r) {
+    const confidenceCopy = {
+      high: 'High match',
+      medium: 'Medium match',
+      low: 'Low match',
+    }[r.confidence] || 'Match';
+
+    const tags = (r.tags || [])
+      .map((t) => `<span class="tag">${escapeHtml(t)}</span>`)
+      .join('');
+
+    const steps = (r.resolution_steps || [])
+      .map((s) => `<li>${escapeHtml(s)}</li>`)
+      .join('');
+
+    return `
+      <div class="result-card">
+        <div class="result-head">
+          <div>
+            <h3>Ticket ${escapeHtml(r.ticket_number)} — ${escapeHtml(r.category)}</h3>
+            <div class="result-meta">${escapeHtml(r.priority)} priority · ${escapeHtml(r.status)}${r.resolution_time_hours ? ` · resolved in ${r.resolution_time_hours}h` : ''}</div>
+          </div>
+          <span class="confidence-badge ${r.confidence}" title="Raw cosine distance: ${r.distance}">${confidenceCopy}</span>
+        </div>
+
+        <div class="tags">${tags}</div>
+        <p class="issue-text">${escapeHtml(r.issue_description)}</p>
+
+        <details>
+          <summary>View original ticket &amp; resolution</summary>
+          <dl class="detail-grid">
+            <div><dt>Customer</dt><dd>${escapeHtml(r.customer_name || '—')} (${escapeHtml(r.subscription_tier || '—')})</dd></div>
+            <div><dt>Satisfaction</dt><dd>${r.satisfaction_score ? r.satisfaction_score + ' / 5' : 'Not rated'}</dd></div>
+            <div><dt>Affected users</dt><dd>${r.affected_users ?? '—'}</dd></div>
+            <div><dt>Root cause</dt><dd>${escapeHtml(r.root_cause || 'Not recorded')}</dd></div>
+          </dl>
+          ${steps ? `<ol class="resolution-steps">${steps}</ol>` : '<p style="font-size:0.85rem; color:var(--ink-soft); margin-top:8px;">No resolution steps recorded for this ticket.</p>'}
+        </details>
+      </div>
+    `;
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = String(text ?? '');
+    return div.innerHTML;
+  }
+
+  checkHealth();
+</script>
+</body>
+</html>
