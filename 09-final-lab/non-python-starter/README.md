@@ -161,42 +161,19 @@ INSERT INTO knowledge_base (article_title, article_content, category, tags) VALU
 ('Database Performance Tuning', 'Advanced strategies for optimizing database performance during high-traffic periods...', 'Performance', ARRAY['database', 'performance', 'optimization']);
 ```
 
-### Step 3: Generate Embeddings for Search
+### Step 3: Generate Real Embeddings for Search
 
-Since we're using a SQL-focused approach, let's create a procedure that simulates embedding generation:
+An earlier version of this workshop simulated embeddings with a SQL hash function. That's fine for exercising query *syntax*, but it can't produce meaningful similarity scores -- two tickets describing the same problem in different words would end up no closer together than two completely unrelated tickets. This step uses real embeddings instead, generated the same way as the rest of the course: via Ollama's `bge-m3` model.
+
+No SQL function needed here -- just run the helper script once:
+
+```bash
+python embed_text.py --bulk
+```
+
+This finds every `support_tickets` and `knowledge_base` row without an embedding, sends its text to Ollama, and stores the real 1024-dimension vector back in Postgres.
 
 ```sql
--- Create a function to simulate embedding generation
--- In a real system, you'd call an external embedding service
-CREATE OR REPLACE FUNCTION generate_sample_embedding(text_input TEXT)
-RETURNS VECTOR(1024) AS $$
-DECLARE
-    embedding_array NUMERIC[];
-    i INTEGER;
-BEGIN
-    -- Generate a simple hash-based embedding for demonstration
-    -- In production, use a real embedding service
-    embedding_array := ARRAY[]::NUMERIC[];
-    
-    FOR i IN 1..1024 LOOP
-        embedding_array := array_append(embedding_array, 
-            (hashtext(text_input || i::text) % 2000 - 1000) / 1000.0);
-    END LOOP;
-    
-    RETURN embedding_array::VECTOR(1024);
-END;
-$$ LANGUAGE plpgsql;
-
--- Generate embeddings for support tickets
-UPDATE support_tickets 
-SET embedding = generate_sample_embedding(issue_description)
-WHERE embedding IS NULL;
-
--- Generate embeddings for knowledge base
-UPDATE knowledge_base 
-SET embedding = generate_sample_embedding(article_title || ' ' || article_content)
-WHERE embedding IS NULL;
-
 -- Verify embeddings were created
 SELECT ticket_number, array_length(embedding::NUMERIC[], 1) as embedding_dimensions
 FROM support_tickets 
@@ -205,12 +182,18 @@ LIMIT 3;
 
 ### Step 4: Basic Vector Search Queries
 
-Now let's explore finding similar tickets:
+Now let's explore finding similar tickets. First, generate a real embedding for the new issue we're searching for:
+
+```bash
+python embed_text.py "Users getting authentication errors when trying to log in"
+```
+
+Copy the vector literal it prints and paste it in place of `PASTE_VECTOR_HERE` below:
 
 ```sql
 -- Find tickets similar to a new issue
 WITH new_issue AS (
-    SELECT generate_sample_embedding('Users getting authentication errors when trying to log in') as query_embedding
+    SELECT PASTE_VECTOR_HERE as query_embedding
 )
 SELECT 
     st.ticket_number,
@@ -227,12 +210,18 @@ LIMIT 5;
 
 ### Step 5: Hybrid Queries - The Core of Modern AI Search
 
-Combine vector similarity with business logic:
+Combine vector similarity with business logic. Generate a real embedding for the new search text first:
+
+```bash
+python embed_text.py "API integration is failing with timeout errors"
+```
+
+Then paste it into the query below:
 
 ```sql
 -- Advanced hybrid search: Find similar tickets with business context
 WITH ticket_search AS (
-    SELECT generate_sample_embedding('API integration is failing with timeout errors') as search_embedding
+    SELECT PASTE_VECTOR_HERE as search_embedding
 ),
 customer_context AS (
     SELECT 2 as current_customer_id  -- StartupXYZ customer
@@ -348,6 +337,7 @@ Combine tickets with knowledge base articles:
 -- Intelligent knowledge base recommendation system
 CREATE OR REPLACE FUNCTION recommend_knowledge_articles(
     issue_description TEXT,
+    search_vector VECTOR(1024),
     ticket_category TEXT DEFAULT NULL,
     max_results INTEGER DEFAULT 5
 )
@@ -361,15 +351,12 @@ RETURNS TABLE (
 ) AS $$
 BEGIN
     RETURN QUERY
-    WITH issue_embedding AS (
-        SELECT generate_sample_embedding(issue_description) as search_vector
-    ),
-    scored_articles AS (
+    WITH scored_articles AS (
         SELECT 
             kb.id,
             kb.article_title,
             kb.category,
-            kb.embedding <=> ie.search_vector as similarity,
+            kb.embedding <=> search_vector as similarity,
             kb.helpfulness_score,
             CASE 
                 WHEN kb.category = ticket_category THEN 'Category match'
@@ -380,8 +367,7 @@ BEGIN
                 ELSE 'Content similarity'
             END as reason
         FROM knowledge_base kb
-        CROSS JOIN issue_embedding ie
-        WHERE (ticket_category IS NULL OR kb.category = ticket_category OR kb.embedding <=> ie.search_vector < 0.6)
+        WHERE (ticket_category IS NULL OR kb.category = ticket_category OR kb.embedding <=> search_vector < 0.6)
     )
     SELECT 
         sa.id,
@@ -403,9 +389,13 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Test the knowledge base recommendation system
+-- First, generate a real embedding for the issue text:
+--   python embed_text.py "Users cannot login and getting authentication errors"
+
+-- Test the knowledge base recommendation system (paste the vector from the script)
 SELECT * FROM recommend_knowledge_articles(
     'Users cannot login and getting authentication errors',
+    PASTE_VECTOR_HERE,
     'Authentication',
     3
 );
@@ -465,6 +455,7 @@ Build reusable functions for a complete system:
 -- Comprehensive support ticket search function
 CREATE OR REPLACE FUNCTION search_support_system(
     search_query TEXT,
+    search_vector VECTOR(1024),
     search_type TEXT DEFAULT 'hybrid', -- 'similarity', 'metadata', 'hybrid'
     customer_id_filter INTEGER DEFAULT NULL,
     priority_filter TEXT DEFAULT NULL,
@@ -485,10 +476,7 @@ RETURNS TABLE (
 ) AS $$
 BEGIN
     RETURN QUERY
-    WITH search_embedding AS (
-        SELECT generate_sample_embedding(search_query) as query_vector
-    ),
-    ticket_results AS (
+    WITH ticket_results AS (
         SELECT 
             'ticket' as type,
             st.id,
@@ -505,13 +493,12 @@ BEGIN
                 'resolution_steps', st.metadata->'resolution_steps'
             ) as meta,
             CASE 
-                WHEN search_type = 'similarity' THEN st.embedding <=> se.query_vector
+                WHEN search_type = 'similarity' THEN st.embedding <=> search_vector
                 WHEN search_type = 'metadata' THEN 0.5
-                ELSE st.embedding <=> se.query_vector
+                ELSE st.embedding <=> search_vector
             END as similarity
         FROM support_tickets st
         JOIN customers c ON st.customer_id = c.id
-        CROSS JOIN search_embedding se
         WHERE (customer_id_filter IS NULL OR st.customer_id = customer_id_filter)
           AND (priority_filter IS NULL OR st.priority = priority_filter)
           AND (status_filter IS NULL OR st.status = status_filter)
@@ -531,9 +518,8 @@ BEGIN
                 'view_count', kb.view_count,
                 'helpfulness_score', kb.helpfulness_score
             ) as meta,
-            kb.embedding <=> se.query_vector as similarity
+            kb.embedding <=> search_vector as similarity
         FROM knowledge_base kb
-        CROSS JOIN search_embedding se
         WHERE include_knowledge_base
           AND (category_filter IS NULL OR kb.category = category_filter)
     ),
@@ -556,9 +542,13 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Test the comprehensive search function
+-- First, generate a real embedding for the search text:
+--   python embed_text.py "authentication login problems"
+
+-- Test the comprehensive search function (paste the vector from the script)
 SELECT * FROM search_support_system(
     'authentication login problems',
+    PASTE_VECTOR_HERE,
     'hybrid',
     NULL,
     NULL,

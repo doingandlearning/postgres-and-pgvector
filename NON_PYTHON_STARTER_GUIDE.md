@@ -87,13 +87,40 @@ Each lab offers multiple paths based on your comfort level:
 
 ---
 
+### Module 07: JSON and JSONB
+**Location**: `07-json-and-jsonb/lab/interactive-version/`
+
+**Key Learning**: How to store, query, and index flexible, semi-structured metadata alongside relational data
+
+**Approaches Available**:
+- **SQL-focused**: `sql_workshop.sql` and `interactive_exercises.sql` walk through JSON vs JSONB, operators, and indexing entirely in SQL
+- **Reference sheet**: `jsonb_cheatsheet.md` for quick lookup of operators and functions during exercises
+
+**Success Criteria**: Understand when to reach for JSONB vs traditional relational columns, and how to query/index it efficiently
+
+---
+
+### Module 08: Hybrid Query
+**Location**: `08-hybrid-query/lab/interactive-version/`
+
+**Key Learning**: How to combine vector similarity, relational filtering, and JSONB metadata in a single query
+
+**Approaches Available**:
+- **SQL-focused**: `hybrid_query_workshop.sql`, `query_builder.sql`, and `search_scenarios.sql` build up hybrid queries step by step, entirely in SQL
+- **Guided README**: a full walkthrough of hybrid query patterns and when to reach for each one
+
+**Success Criteria**: Understand how and when to combine vector, relational, and JSONB filtering in one query for the best results
+
+---
+
 ### Module 09: Final Lab - AI Ticket Support
+**Location**: `09-final-lab/non-python-starter/`
+
 **Key Learning**: Building a complete AI-powered application
 
 **Approaches Available**:
-- **Config-based**: JSON configuration for ticket categories and search parameters
-- **CLI workflow**: Step-by-step commands to build the complete system
-- **SQL-focused**: Complex queries combining vector, relational, and JSONB data
+- **SQL-focused**: A 10-step guided SQL Workshop (`README.md`) combining vector, relational, and JSONB data, from schema design through a production-style search function
+- **Real embeddings, no coding**: `python embed_text.py --bulk` generates real embeddings for the sample data; `python embed_text.py "some text"` generates a pasteable vector for any new search text used in the workshop steps
 
 **Success Criteria**: Build a working AI support system using learned concepts
 

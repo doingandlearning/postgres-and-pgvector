@@ -1,6 +1,7 @@
 import PyPDF2
 from utils import get_embedding
 import os
+import sys
 
 def chunks_from_pdf(path, tokens=300, overlap=50):
     """

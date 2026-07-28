@@ -1,9 +1,11 @@
 # Lab: Querying with Vectors (Non-Python Starter)
 
 ## Objective
+
 This lab focuses on understanding **vector similarity search concepts** without requiring extensive Python programming. You'll learn how to find similar content using different approaches and understand the core principles behind semantic search.
 
 ## Learning Goals
+
 - Understand different similarity measures (cosine, euclidean, inner product)
 - Learn how to perform vector searches with SQL
 - Experiment with different search parameters and filters
@@ -13,13 +15,14 @@ This lab focuses on understanding **vector similarity search concepts** without 
 ## Prerequisites
 
 Make sure you have data loaded in your database. If not, run one of these first:
+
 ```bash
 # Option 1: From previous lab
 cd ../../../03-generating-and-storing/lab/non-python-starter
 python load_configured.py
 
 # Option 2: Quick sample data
-cd ../../../03-generating-and-storing/lab/non-python-starter  
+cd ../../../03-generating-and-storing/lab/non-python-starter
 python load_sample_data.py
 ```
 
@@ -30,32 +33,34 @@ python load_sample_data.py
 Use SQL queries to understand vector similarity concepts directly.
 
 #### Step 1: Basic Similarity Search
+
 ```sql
 -- Connect to your database first
 -- docker exec -it pgvector-db psql -U postgres -d pgvector
 
 -- Find books similar to a specific book
-SELECT 
+SELECT
   name,
   item_data->>'subject' as subject,
   embedding <=> (
-    SELECT embedding 
-    FROM items 
-    WHERE name LIKE '%Python%' 
+    SELECT embedding
+    FROM items
+    WHERE name LIKE '%Programming%'
     LIMIT 1
   ) as similarity_score
 FROM items
-ORDER BY similarity_score ASC
+ORDER BY similarity_score
 LIMIT 5;
 ```
 
 #### Step 2: Compare Similarity Measures
+
 ```sql
 -- Compare different distance metrics for the same query
 WITH target_book AS (
-  SELECT embedding FROM items WHERE name LIKE '%Machine Learning%' LIMIT 1
+  SELECT embedding FROM items WHERE name LIKE '%Learning%' LIMIT 1
 )
-SELECT 
+SELECT
   name,
   item_data->>'subject' as subject,
   ROUND((embedding <=> (SELECT embedding FROM target_book))::numeric, 4) as cosine_similarity,
@@ -71,6 +76,7 @@ LIMIT 5;
 Use a helper script that generates embeddings and builds SQL queries for you.
 
 #### Step 1: Generate Query Embeddings
+
 ```bash
 python generate_search_embedding.py "artificial intelligence and machine learning"
 ```
@@ -78,6 +84,7 @@ python generate_search_embedding.py "artificial intelligence and machine learnin
 This outputs a ready-to-use SQL query.
 
 #### Step 2: Run Custom Searches
+
 ```bash
 python search_assistant.py --query "web development frameworks" --limit 5 --subject programming
 ```
@@ -87,7 +94,9 @@ python search_assistant.py --query "web development frameworks" --limit 5 --subj
 Use JSON configuration to define different search scenarios.
 
 #### Step 1: Configure Search Scenarios
+
 **Edit `search_config.json`:**
+
 ```json
 {
   "searches": [
@@ -110,6 +119,7 @@ Use JSON configuration to define different search scenarios.
 ```
 
 #### Step 2: Run Configured Searches
+
 ```bash
 python run_search_scenarios.py
 ```
@@ -117,9 +127,10 @@ python run_search_scenarios.py
 ## Learning Experiments
 
 ### Experiment 1: Understanding Similarity Scores
+
 ```sql
 -- Find the range of similarity scores
-SELECT 
+SELECT
   MIN(embedding <=> (SELECT embedding FROM items LIMIT 1)) as min_similarity,
   MAX(embedding <=> (SELECT embedding FROM items LIMIT 1)) as max_similarity,
   AVG(embedding <=> (SELECT embedding FROM items LIMIT 1)) as avg_similarity
@@ -129,14 +140,15 @@ FROM items;
 **Question**: What do these scores tell you about your data distribution?
 
 ### Experiment 2: Subject-Based Clustering
+
 ```sql
 -- See how well subjects cluster together
 WITH ai_center AS (
   SELECT AVG(embedding) as center_embedding
-  FROM items 
+  FROM items
   WHERE item_data->>'subject' = 'ai'
 )
-SELECT 
+SELECT
   item_data->>'subject' as subject,
   AVG(embedding <=> (SELECT center_embedding FROM ai_center)) as avg_distance_to_ai_center,
   COUNT(*) as book_count
@@ -148,6 +160,7 @@ ORDER BY avg_distance_to_ai_center ASC;
 **Question**: Which subjects are most similar to AI? Does this make sense?
 
 ### Experiment 3: Query Refinement
+
 Try these different queries and compare results:
 
 1. **Broad query**: "programming"
@@ -157,16 +170,17 @@ Try these different queries and compare results:
 ```bash
 # Use the helper script to test different queries
 python search_assistant.py --query "programming" --limit 5
-python search_assistant.py --query "python web development frameworks" --limit 5  
+python search_assistant.py --query "python web development frameworks" --limit 5
 python search_assistant.py --query "building scalable software applications" --limit 5
 ```
 
 **Question**: How do the results differ? Which approach gives better results for your needs?
 
 ### Experiment 4: Similarity Thresholds
+
 ```sql
 -- Find books with different similarity thresholds
-SELECT 
+SELECT
   'Very Similar (< 0.3)' as category,
   COUNT(*) as count
 FROM items
@@ -174,7 +188,7 @@ WHERE embedding <=> (SELECT embedding FROM items WHERE name LIKE '%Python%' LIMI
 
 UNION ALL
 
-SELECT 
+SELECT
   'Somewhat Similar (0.3-0.6)' as category,
   COUNT(*) as count
 FROM items
@@ -182,7 +196,7 @@ WHERE embedding <=> (SELECT embedding FROM items WHERE name LIKE '%Python%' LIMI
 
 UNION ALL
 
-SELECT 
+SELECT
   'Not Very Similar (> 0.6)' as category,
   COUNT(*) as count
 FROM items
@@ -194,6 +208,7 @@ WHERE embedding <=> (SELECT embedding FROM items WHERE name LIKE '%Python%' LIMI
 ## Understanding Vector Search vs Traditional Search
 
 ### Traditional Text Search
+
 ```sql
 -- Find books using traditional text matching
 SELECT name, item_data->>'subject' as subject
@@ -203,14 +218,15 @@ ORDER BY name;
 ```
 
 ### Vector Semantic Search
+
 ```sql
 -- Find books using semantic similarity (no exact word matches required)
-SELECT 
+SELECT
   name,
   item_data->>'subject' as subject,
   embedding <=> (
-    SELECT AVG(embedding) 
-    FROM items 
+    SELECT AVG(embedding)
+    FROM items
     WHERE name ILIKE '%machine%' OR name ILIKE '%learning%'
   ) as similarity
 FROM items
@@ -223,6 +239,7 @@ LIMIT 10;
 ## Advanced Concepts
 
 ### Hybrid Search (Combining Vector + Traditional)
+
 ```sql
 -- Combine text matching with vector similarity
 WITH text_matches AS (
@@ -231,7 +248,7 @@ WITH text_matches AS (
   WHERE name ILIKE '%python%'
 ),
 vector_matches AS (
-  SELECT 
+  SELECT
     *,
     embedding <=> (
       SELECT AVG(embedding) FROM text_matches
@@ -242,7 +259,7 @@ vector_matches AS (
     SELECT AVG(embedding) FROM text_matches
   ) < 0.6
 )
-SELECT 
+SELECT
   i.name,
   i.item_data->>'subject' as subject,
   COALESCE(tm.text_boost, 0) + COALESCE(vm.vector_boost, 0) as combined_score,
@@ -256,21 +273,23 @@ LIMIT 10;
 ```
 
 ### Performance Analysis
+
 ```sql
 -- Compare query performance
 EXPLAIN ANALYZE
-SELECT 
-  name, 
+SELECT
+  name,
   embedding <=> (SELECT embedding FROM items LIMIT 1) as similarity
 FROM items
 WHERE name != (SELECT name FROM items LIMIT 1)  -- Exclude the reference book
 ORDER BY similarity
-LIMIT 5; 
+LIMIT 5;
 ```
 
 ## Troubleshooting
 
 ### If you get no results:
+
 ```sql
 -- Check if you have data
 SELECT COUNT(*) FROM items;
@@ -283,6 +302,7 @@ SELECT name, item_data->>'subject' FROM items LIMIT 3;
 ```
 
 ### If similarity scores seem wrong:
+
 ```sql
 -- Check embedding dimensions
 SELECT vector_dims(embedding) FROM items LIMIT 1;
@@ -292,10 +312,11 @@ SELECT COUNT(*) FROM items WHERE embedding IS NULL;
 ```
 
 ### If queries are slow:
+
 ```sql
 -- Create vector index for better performance
-CREATE INDEX IF NOT EXISTS embedding_cosine_idx 
-ON items 
+CREATE INDEX IF NOT EXISTS embedding_cosine_idx
+ON items
 USING ivfflat (embedding vector_cosine_ops)
 WITH (lists = 10);
 ```
@@ -303,6 +324,7 @@ WITH (lists = 10);
 ## Success Criteria
 
 You've completed the lab when you can:
+
 1. ✅ Understand how similarity scores relate to content relevance
 2. ✅ Choose appropriate similarity measures for different use cases
 3. ✅ Combine vector search with traditional filters
@@ -314,21 +336,25 @@ You've completed the lab when you can:
 Think about how vector similarity search applies to your domain:
 
 ### E-commerce
+
 - **Product recommendations**: "Customers who liked this also liked..."
 - **Search refinement**: "Similar products" when exact matches aren't available
 - **Category discovery**: Group products by semantic similarity
 
 ### Content Management
+
 - **Document search**: Find documents by concept, not just keywords
 - **Content recommendations**: Suggest related articles or resources
 - **Duplicate detection**: Find semantically similar content
 
 ### Customer Support
+
 - **Ticket routing**: Match new tickets to similar resolved cases
 - **Knowledge base search**: Find relevant help articles
 - **FAQ automation**: Match questions to existing answers
 
 ### Research & Development
+
 - **Literature review**: Find related papers and research
 - **Patent search**: Identify similar inventions or prior art
 - **Trend analysis**: Group similar concepts and ideas
@@ -347,18 +373,20 @@ After completing this lab, you should understand:
 ## Next Steps
 
 Once you understand these concepts:
+
 1. Try with your own domain-specific data
 2. Experiment with different embedding models
 3. Build hybrid search systems combining multiple approaches
 4. Move on to the RAG lab to see how to enhance results with LLMs
 
-Remember: **These concepts transfer to any vector database or search system!** 
+Remember: **These concepts transfer to any vector database or search system!**
 
 ## Use any existing book's embedding as the query vector
-SELECT 
-  name, 
-  embedding <=> (SELECT embedding FROM items LIMIT 1) as similarity
+
+SELECT
+name,
+embedding <=> (SELECT embedding FROM items LIMIT 1) as similarity
 FROM items
-WHERE name != (SELECT name FROM items LIMIT 1)  -- Exclude the reference book
+WHERE name != (SELECT name FROM items LIMIT 1) -- Exclude the reference book
 ORDER BY similarity
-LIMIT 5; 
+LIMIT 5;
