@@ -113,7 +113,7 @@ def enhance_with_openai(books, user_query=None):
     please summarize the list of books and recommend the best ones for a beginner, intermediate, and
     advanced programmer. Provide a brief explanation for each recommendation.
     """
-
+    
     # Payload for OpenAI request
     payload = {
         "model": "gpt-4",

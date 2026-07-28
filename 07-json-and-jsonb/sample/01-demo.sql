@@ -3,7 +3,8 @@ FROM items;
 -- ->> extracts a TEXT value (useful for direct display).
 SELECT name, item_data
 FROM items
-WHERE item_data->>'subject' = 'programming';
+WHERE item_data->>'subject' = 'programming'; -- More expensive
+-- WHERE subject = 'programming';  --- if this was a column, it would be faster!
 -- This finds only items where "category": "programming".
 SELECT name, item_data
 FROM items
@@ -25,3 +26,7 @@ WHERE item_data @> '{"subject": "web_development"}';
 -- @> checks if the given JSON structure exists within item_data.
 CREATE INDEX idx_items_jsonb ON items USING GIN (item_data);
 -- A GIN index improves key lookups (?), containment queries (@>), and path queries (jsonb_path_query()).
+EXPLAIN ANALYZE
+SELECT name, item_data
+FROM items
+WHERE item_data @> '{"subject": "web_development"}';

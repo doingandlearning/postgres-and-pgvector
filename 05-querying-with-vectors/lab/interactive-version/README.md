@@ -42,14 +42,14 @@ Use SQL queries to understand vector similarity concepts directly.
 SELECT
   name,
   item_data->>'subject' as subject,
-  embedding <=> (
+  1 - (embedding <=> (
     SELECT embedding
     FROM items
     WHERE name LIKE '%Programming%'
     LIMIT 1
-  ) as similarity_score
+  )) as similarity_score
 FROM items
-ORDER BY similarity_score
+ORDER BY similarity_score desc 
 LIMIT 5;
 ```
 
@@ -58,7 +58,7 @@ LIMIT 5;
 ```sql
 -- Compare different distance metrics for the same query
 WITH target_book AS (
-  SELECT embedding FROM items WHERE name LIKE '%Learning%' LIMIT 1
+  SELECT embedding FROM items WHERE name LIKE '%Programming%' LIMIT 1
 )
 SELECT
   name,
@@ -184,7 +184,7 @@ SELECT
   'Very Similar (< 0.3)' as category,
   COUNT(*) as count
 FROM items
-WHERE embedding <=> (SELECT embedding FROM items WHERE name LIKE '%Python%' LIMIT 1) < 0.3
+WHERE embedding <=> (SELECT embedding FROM items WHERE name LIKE '%Programming%' LIMIT 1) < 0.3
 
 UNION ALL
 
@@ -192,7 +192,7 @@ SELECT
   'Somewhat Similar (0.3-0.6)' as category,
   COUNT(*) as count
 FROM items
-WHERE embedding <=> (SELECT embedding FROM items WHERE name LIKE '%Python%' LIMIT 1) BETWEEN 0.3 AND 0.6
+WHERE embedding <=> (SELECT embedding FROM items WHERE name LIKE '%Programming%' LIMIT 1) BETWEEN 0.3 AND 0.6
 
 UNION ALL
 
@@ -200,7 +200,7 @@ SELECT
   'Not Very Similar (> 0.6)' as category,
   COUNT(*) as count
 FROM items
-WHERE embedding <=> (SELECT embedding FROM items WHERE name LIKE '%Python%' LIMIT 1) > 0.6;
+WHERE embedding <=> (SELECT embedding FROM items WHERE name LIKE '%Programming%' LIMIT 1) > 0.6;
 ```
 
 **Question**: What similarity threshold works best for your use case?

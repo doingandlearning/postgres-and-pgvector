@@ -16,3 +16,12 @@ Content-Type: application/json
   "format": "json",
   "stream": false
 }
+
+###
+POST https://api.openai.com/v1/responses
+Content-Type: application/json
+Authorization: Bearer
+{
+  "model": "gpt-5.4-mini",
+  "input": "Tell me about RAG"
+}

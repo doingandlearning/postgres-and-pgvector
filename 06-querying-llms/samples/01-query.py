@@ -20,10 +20,10 @@ headers = {
 payload = {
     "model": "gpt-4.1-mini-2025-04-14",
     "messages": [ # System message to set the context - this is important for the model to understand its role
-        {"role": "system", "content": "You are a helpful assistant. You are knowledgeable about vector databases and their applications. You are coach and trainer for developers."},
+        {"role": "system", "content": "You are a helpful assistant. You are knowledgeable about vector databases and their applications. You are coach and trainer for developers. Always aim for concise reponses. Be clear. Don't worry about saying hello or any nicities, just give the information. Aim for 150 tokens or less."},
         {"role": "user", "content": input("Enter your query: ")}  # User input for the query
     ],
-    "temperature": 0.7,
+    "temperature": 0.1,
     "max_tokens": 150
 }
 
