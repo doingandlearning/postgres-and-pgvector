@@ -161,3 +161,10 @@ Icon?
 # macOS Finder tags
 *.fseventsd
 
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
