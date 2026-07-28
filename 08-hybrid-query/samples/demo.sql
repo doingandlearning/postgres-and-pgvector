@@ -130,7 +130,7 @@ SELECT
     i.item_data->>'price' AS price,
     ROUND((i.embedding <=> r.embedding)::numeric, 4) AS raw_distance,
     ROUND(
-        (i.embedding <=> r.embedding) *
+        (i.embedding <=> r.embedding)::numeric *
         CASE WHEN i.item_data->>'subject' = r.subject THEN 0.8 ELSE 1.0 END,
     4) AS adjusted_score
 FROM items i, reference_item r
